@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     default: "anhht.me",
     template: "%s | anhht.me",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Co-founder of bankquiz.app",
   openGraph: {
     title: "anhht.me",
-    description: "Co-founder of unkey.dev and founder of planetfall.io",
+    description: "Co-founder of bankquiz.app",
     url: "https://anhht.me",
     siteName: "anhht.me",
     images: [
