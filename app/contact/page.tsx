@@ -1,27 +1,27 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Facebook, Github, Mail } from "lucide-react";
 import Link from "next/link";
 import { Card } from "../components/card";
 import { Navigation } from "../components/nav";
 
 const socials = [
   {
-    icon: <Twitter size={20} />,
-    href: "https://twitter.com/chronark_",
-    label: "Twitter",
-    handle: "@chronark_",
+    icon: <Facebook size={20} />,
+    href: "https://facebook.com/anhht82",
+    label: "Facebook",
+    handle: "anhht82",
   },
   {
     icon: <Mail size={20} />,
     href: "mailto:dev@anhht.me",
     label: "Email",
-    handle: "dev@anhht.me",
+    handle: "hi@anhht.me",
   },
   {
     icon: <Github size={20} />,
-    href: "https://github.com/chronark",
+    href: "https://github.com/anhhtca",
     label: "Github",
-    handle: "chronark",
+    handle: "anhhtca",
   },
 ];
 
