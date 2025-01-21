@@ -5,6 +5,7 @@ import "../global.css";
 import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://anhht.me"),
   title: {
     default: "anhht.me",
     template: "%s | anhht.me",
