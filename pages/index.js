@@ -1,40 +1,69 @@
-import React from 'react';
-import Head from 'next/head';
-import { Scrollspy } from '@makotot/ghostui';
+import { Scrollspy } from "@makotot/ghostui";
+import Head from "next/head";
+import React from "react";
 
-import About from '../components/About';
-import Analytics from '../components/Analytics';
-import Experience from '../components/Experience';
-import Footer from '../components/Footer';
-import Landing from '../components/Landing';
-import Navbar from '../components/Navbar';
-import Projects from '../components/Projects';
-import ThemeProvider from '../providers/ThemeProvider';
-import Contact from '../components/Contact';
+import About from "../components/About";
+import Analytics from "../components/Analytics";
+import Footer from "../components/Footer";
+import Landing from "../components/Landing";
+import Navbar from "../components/Navbar";
+import ThemeProvider from "../providers/ThemeProvider";
 
-export default function Home () {
+export default function Home() {
   const sectionRefs = [
     React.useRef(null),
     React.useRef(null),
     React.useRef(null),
     React.useRef(null),
-    React.useRef(null)
+    React.useRef(null),
   ];
 
   return (
     <>
       <Head>
-        <title>Joseg LEGO - Software Developer | Frontend | WebUi | JavaScript FullStack</title>
-        <meta name="description" content="Joseg LEGO - Portfolio" />
+        <title>
+          AnhHT - Software Developer | Frontend | WebUi | JavaScript FullStack
+        </title>
+        <meta name="description" content="AnhHT - Portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png" />
-        <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
-        <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="196x196"
+          href="/favicon-192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="160x160"
+          href="/favicon-160.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="64x64"
+          href="/favicon-64.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16.png"
+        />
         <link rel="apple-touch-icon" href="/favicon-57.png" />
         <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png" />
@@ -55,9 +84,9 @@ export default function Home () {
               <Navbar activeSectionIndex={currentElementIndexInViewport} />
               <Landing ref={sectionRefs[0]} />
               <About ref={sectionRefs[1]} />
-              <Experience ref={sectionRefs[2]} />
-              <Projects ref={sectionRefs[3]} />
-              <Contact ref={sectionRefs[4]} />
+              {/* <Experience ref={sectionRefs[2]} /> */}
+              {/* <Projects ref={sectionRefs[3]} /> */}
+              {/* <Contact ref={sectionRefs[4]} /> */}
               <Footer />
               <Analytics webpageTitle="index" />
             </>

@@ -1,11 +1,11 @@
-import React from 'react';
-import { FaSun, FaRegMoon, FaBars, FaTimes } from 'react-icons/fa';
-import { useTheme } from '../../providers/ThemeProvider';
-import ReactModal from 'react-modal';
+import React from "react";
+import { FaBars, FaRegMoon, FaSun, FaTimes } from "react-icons/fa";
+import ReactModal from "react-modal";
+import { useTheme } from "../../providers/ThemeProvider";
 
-import styles from './Navbar.module.css';
+import styles from "./Navbar.module.css";
 
-function Navbar ({ activeSectionIndex }) {
+function Navbar({ activeSectionIndex }) {
   const { darkMode, setDarkMode } = useTheme();
   const [scrollPosition, setScrollPosition] = React.useState(0);
   const [isOpen, setIsOpen] = React.useState(false);
@@ -15,37 +15,41 @@ function Navbar ({ activeSectionIndex }) {
   };
 
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const sections = [
-    { id: '#home', title: 'Home' },
-    { id: '#about', title: 'About' },
-    { id: '#experience', title: 'Experience' },
-    { id: '#projects', title: 'Projects' },
-    { id: '#contact', title: 'Contact' }
+    { id: "#home", title: "Home" },
+    { id: "#about", title: "About" },
+    // { id: '#experience', title: 'Experience' },
+    // { id: '#projects', title: 'Projects' },
+    // { id: '#contact', title: 'Contact' }
   ];
 
   const setTheme = () => {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const hasDarkMode = document.body.classList.contains('dark-theme');
-    const hasLightkMode = document.body.classList.contains('light-theme');
+    const prefersDarkScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const hasDarkMode = document.body.classList.contains("dark-theme");
+    const hasLightkMode = document.body.classList.contains("light-theme");
     const tmpDarkMode = (prefersDarkScheme && !hasLightkMode) || hasDarkMode;
 
     setDarkMode(tmpDarkMode);
   };
 
   const toggleMode = () => {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDarkScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     if (prefersDarkScheme) {
-      document.body.classList.toggle('light-theme');
+      document.body.classList.toggle("light-theme");
       setTimeout(setTheme);
     } else {
-      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle("dark-theme");
       setTimeout(setTheme);
     }
   };
@@ -55,24 +59,51 @@ function Navbar ({ activeSectionIndex }) {
   }, [setDarkMode]);
 
   React.useEffect(() => {
-    ReactModal.setAppElement('body');
+    ReactModal.setAppElement("body");
   }, []);
 
   return (
     <>
-      <div className={`${styles.navbar} ${scrollPosition > 75 ? styles.activeNavbar : ''}`}>
+      <div
+        className={`${styles.navbar} ${
+          scrollPosition > 75 ? styles.activeNavbar : ""
+        }`}
+      >
         <div className={styles.navbarContainer}>
-          <div className={`${styles.navbarBrand} ${darkMode ? styles.darkMode : ''}`}>JosegLEGO</div>
+          <div
+            className={`${styles.navbarBrand} ${
+              darkMode ? styles.darkMode : ""
+            }`}
+          >
+            AnhHT
+          </div>
           <div className={styles.navbarActions}>
             <ul className={styles.navbarList}>
               {sections.map(({ id, title }, index) => (
-                <li key={id}><a href={id} className={index === activeSectionIndex ? styles.activeSection : ''}>{title}</a></li>
+                <li key={id}>
+                  <a
+                    href={id}
+                    className={
+                      index === activeSectionIndex ? styles.activeSection : ""
+                    }
+                  >
+                    {title}
+                  </a>
+                </li>
               ))}
             </ul>
-            <button className={styles.hamburgerButton} onClick={() => setIsOpen(true)} aria-label="Open Navbar Menu">
+            <button
+              className={styles.hamburgerButton}
+              onClick={() => setIsOpen(true)}
+              aria-label="Open Navbar Menu"
+            >
               <FaBars />
             </button>
-            <button className={styles.modeButton} onClick={toggleMode} aria-label={`Activate ${darkMode ? 'Light Mode' : 'Dark Mode'}`}>
+            <button
+              className={styles.modeButton}
+              onClick={toggleMode}
+              aria-label={`Activate ${darkMode ? "Light Mode" : "Dark Mode"}`}
+            >
               {darkMode ? <FaSun /> : <FaRegMoon />}
             </button>
           </div>
@@ -82,9 +113,14 @@ function Navbar ({ activeSectionIndex }) {
         isOpen={isOpen}
         closeTimeoutMS={500}
         className={`ReactModal__Content ${styles.navbarMenu}`}
-        overlayClassName="ReactModal__Overlay">
+        overlayClassName="ReactModal__Overlay"
+      >
         <div className={`ReactModal__Container ${styles.menuContainer}`}>
-          <button className={styles.closeMenuButton} onClick={() => setIsOpen(false)} aria-label="Close Navbar Menu">
+          <button
+            className={styles.closeMenuButton}
+            onClick={() => setIsOpen(false)}
+            aria-label="Close Navbar Menu"
+          >
             <FaTimes />
           </button>
           <ul className={styles.mobileNavbarList}>
@@ -92,8 +128,11 @@ function Navbar ({ activeSectionIndex }) {
               <li key={id}>
                 <a
                   href={id}
-                  className={index === activeSectionIndex ? styles.activeSection : ''}
-                  onClick={() => setIsOpen(!isOpen)}>
+                  className={
+                    index === activeSectionIndex ? styles.activeSection : ""
+                  }
+                  onClick={() => setIsOpen(!isOpen)}
+                >
                   {title}
                 </a>
               </li>
