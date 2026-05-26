@@ -25,7 +25,7 @@ import profileImg from "@/public/profile-img.jpg";
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
   description:
-    "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
+    "Hoàng Tuấn Anh - Applied AI Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
   alternates: {
     canonical: siteConfig.url,
   },
@@ -84,7 +84,7 @@ export default function IndexPage() {
             width={100}
             sizes="100vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Naman Barkiya - Applied AI Engineer Portfolio"
+            alt="Hoàng Tuấn Anh - Applied AI Engineer Portfolio"
             priority
           />
           <AnimatedText
@@ -92,7 +92,7 @@ export default function IndexPage() {
             delay={0.2}
             className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Naman Barkiya
+            Hoàng Tuấn Anh
           </AnimatedText>
           <AnimatedText
             as="h3"
@@ -129,7 +129,7 @@ export default function IndexPage() {
                     size: "lg",
                   })
                 )}
-                aria-label="Contact Naman Barkiya"
+                aria-label="Contact Hoàng Tuấn Anh"
               >
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
               </Link>

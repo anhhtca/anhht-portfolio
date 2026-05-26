@@ -14,72 +14,72 @@ type PagesConfig = {
 
 export const pagesConfig: PagesConfig = {
   home: {
-    title: "Home",
-    description: "Welcome to my portfolio website.",
+    title: "Trang chủ",
+    description: "Chào mừng bạn đến với trang portfolio của tôi.",
     metadata: {
-      title: "Home",
-      description: "Naman Barkiya's portfolio website.",
+      title: "Trang chủ",
+      description: "Trang portfolio của Hoàng Tuấn Anh.",
     },
   },
   skills: {
-    title: "Skills",
-    description: "Key skills that define my professional identity.",
+    title: "Kỹ năng",
+    description: "Các kỹ năng cốt lõi định danh bản sắc chuyên môn.",
     metadata: {
-      title: "Skills",
+      title: "Kỹ năng",
       description:
-        "Naman Barkiya's key skills that define his professional identity.",
+        "Các kỹ năng cốt lõi định danh bản sắc chuyên môn của Hoàng Tuấn Anh.",
     },
   },
   projects: {
-    title: "Projects",
-    description: "Showcasing impactful projects and technical achievements.",
+    title: "Dự án",
+    description: "Trình diễn các dự án có ảnh hưởng và thành tựu kỹ thuật.",
     metadata: {
-      title: "Projects",
-      description: "Naman Barkiya's projects in building web applications.",
+      title: "Dự án",
+      description: "Các dự án của Hoàng Tuấn Anh trong việc xây dựng ứng dụng web.",
     },
   },
   contact: {
-    title: "Contact",
-    description: "Let's connect and explore collaborations.",
+    title: "Liên hệ",
+    description: "Kết nối và khám phá cơ hội hợp tác.",
     metadata: {
-      title: "Contact",
-      description: "Contact Naman Barkiya.",
+      title: "Liên hệ",
+      description: "Liên hệ với Hoàng Tuấn Anh.",
     },
   },
   contributions: {
-    title: "Contributions",
-    description: "Open-source contributions and community involvement.",
+    title: "Đóng góp",
+    description: "Đóng góp mã nguồn mở và tham gia cộng đồng.",
     metadata: {
-      title: "Contributions",
+      title: "Đóng góp",
       description:
-        "Naman Barkiya's open-source contributions and community involvement.",
+        "Đóng góp mã nguồn mở và tham gia cộng đồng của Hoàng Tuấn Anh.",
     },
   },
   resume: {
-    title: "Resume",
-    description: "Naman Barkiya's resume.",
+    title: "Sơ yếu lý lịch",
+    description: "Sơ yếu lý lịch của Hoàng Tuấn Anh.",
     metadata: {
-      title: "Resume",
-      description: "Naman Barkiya's resume.",
+      title: "Sơ yếu lý lịch",
+      description: "Sơ yếu lý lịch của Hoàng Tuấn Anh.",
     },
   },
   blogs: {
-    title: "Blogs",
+    title: "Blog",
     description:
-      "Thoughts on AI, software engineering, and building in public.",
+      "Những suy nghĩ về AI, kỹ thuật phần mềm và xây dựng công khai.",
     metadata: {
-      title: "Blogs",
+      title: "Blog",
       description:
-        "Naman Barkiya's blog — thoughts on AI, software engineering, and building in public.",
+        "Blog của Hoàng Tuấn Anh — những suy nghĩ về AI, kỹ thuật phần mềm và xây dựng công khai.",
     },
   },
   experience: {
-    title: "Experience",
-    description: "Professional journey and career timeline.",
+    title: "Kinh nghiệm",
+    description: "Hành trình chuyên môn và lộ trình sự nghiệp.",
     metadata: {
-      title: "Experience",
+      title: "Kinh nghiệm",
       description:
-        "Naman Barkiya's professional journey and experience timeline.",
+        "Hành trình chuyên môn và lộ trình sự nghiệp của Hoàng Tuấn Anh.",
     },
   },
 };
