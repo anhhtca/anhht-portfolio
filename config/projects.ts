@@ -53,7 +53,7 @@ export const Projects: ProjectInterface[] = [
         title: "Landing & Sections",
         description:
           "A clean, minimal landing page with sections for skills, projects, contributions, and experience.",
-        imgArr: ["/profile-img.jpg"],
+        imgArr: ["/profile-img.png"],
       },
     ],
     descriptionDetails: {
