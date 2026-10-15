@@ -20,7 +20,7 @@ export const siteConfig = {
   ogImage: "/og.png",
   avatar: "/profile-img.png",
   iconIco: "/favicon.ico",
-  logoIcon: "/logo.png",
+  logoIcon: "/apple-touch-icon.png",
   keywords: [
     "Hoang Tuan Anh",
     "Tuấn Anh",

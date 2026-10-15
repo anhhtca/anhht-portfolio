@@ -77,11 +77,18 @@ export const metadata = {
     site: `@${siteConfig.username}`,
   },
   icons: {
-    icon: siteConfig.iconIco,
-    shortcut: siteConfig.logoIcon,
-    apple: siteConfig.logoIcon,
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "48x48", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: "/manifest.webmanifest",
   alternates: {
     canonical: siteConfig.url,
   },
