@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <PageContainer
+      pageKey="contact"
       title={pagesConfig.contact.title}
       description={pagesConfig.contact.description}
     >

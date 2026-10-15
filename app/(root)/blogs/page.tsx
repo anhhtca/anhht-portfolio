@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Script from "next/script";
 
+import { BlogsEmptyState } from "@/components/blogs/blogs-empty-state";
 import BlogCard from "@/components/blogs/blog-card";
 import { AnimatedSection } from "@/components/common/animated-section";
 import PageContainer from "@/components/common/page-container";
@@ -119,19 +120,12 @@ export default function BlogsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <PageContainer
+        pageKey="blogs"
         title={pagesConfig.blogs.title}
         description={pagesConfig.blogs.description}
       >
         {blogs.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-24 text-center">
-            <p className="text-4xl mb-4">✍️</p>
-            <h3 className="text-xl font-semibold text-foreground mb-2">
-              No posts yet
-            </h3>
-            <p className="text-muted-foreground text-sm">
-              Check back soon — posts are coming.
-            </p>
-          </div>
+          <BlogsEmptyState />
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-2">
             {blogs.map((blog, index) => (

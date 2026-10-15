@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,6 +7,7 @@ import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
 import { ProjectInterface } from "@/config/projects";
+import { useLocale } from "@/hooks/use-locale";
 import { getProjectThumbnail } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -12,7 +15,13 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const { locale, t } = useLocale();
   const thumbnailSrc = getProjectThumbnail(project);
+
+  const localizedDesc =
+    locale === "vi"
+      ? project.shortDescriptionVi || project.shortDescription
+      : project.shortDescriptionEn || project.shortDescription;
 
   return (
     <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col">
@@ -31,14 +40,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.companyName}
         </h5>
         <p className="line-clamp-3 font-normal text-muted-foreground flex-grow">
-          {project.shortDescription}
+          {localizedDesc}
         </p>
         <div className="flex gap-2 flex-wrap">
           <ChipContainer textArr={project.category} />
         </div>
         <Link href={`/projects/${project.id}`} className="mt-auto">
           <Button variant={"default"} className="mt-2 w-full sm:w-auto">
-            Read more
+            {t.common.readMore}
             <Icons.chevronRight className="w-4 ml-1" />
           </Button>
         </Link>

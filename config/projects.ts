@@ -17,6 +17,8 @@ export interface ProjectInterface {
   companyName: string;
   category: ValidCategory[];
   shortDescription: string;
+  shortDescriptionVi?: string;
+  shortDescriptionEn?: string;
   websiteLink?: string;
   githubLink?: string;
   thumbnail?: string;
@@ -35,6 +37,10 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Web Application", "Web Dev", "Full Stack"],
     shortDescription:
+      "A web-based learning and assessment platform designed to make knowledge practice more engaging and accessible.",
+    shortDescriptionVi:
+      "Nền tảng học tập và ôn luyện trực tuyến được thiết kế giúp việc luyện tập kiến thức trở nên tương tác và dễ tiếp cận hơn.",
+    shortDescriptionEn:
       "A web-based learning and assessment platform designed to make knowledge practice more engaging and accessible.",
     websiteLink: "https://bankquiz.app",
     thumbnail: "",
@@ -69,6 +75,10 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Developer Platform", "Full Stack", "Backend"],
     shortDescription:
+      "A centralized identity and access management platform designed to support multiple applications with shared authentication and application-specific authorization.",
+    shortDescriptionVi:
+      "Nền tảng quản lý danh tính và phân quyền tập trung hỗ trợ xác thực dùng chung và ủy quyền riêng biệt cho nhiều ứng dụng.",
+    shortDescriptionEn:
       "A centralized identity and access management platform designed to support multiple applications with shared authentication and application-specific authorization.",
     websiteLink: "https://ums.io.vn",
     thumbnail: "",
@@ -112,6 +122,10 @@ export const Projects: ProjectInterface[] = [
     category: ["AI Engineering", "Backend"],
     shortDescription:
       "An exploration of privacy-focused AI applications using locally hosted language models to retrieve information from documents and domain-specific knowledge bases.",
+    shortDescriptionVi:
+      "Trợ lý tri thức AI nội bộ ưu tiên bảo mật, hoạt động hoàn toàn offline trên phần cứng cá nhân sử dụng các mô hình LLM mã nguồn mở và RAG.",
+    shortDescriptionEn:
+      "An exploration of privacy-focused AI applications using locally hosted language models to retrieve information from documents and domain-specific knowledge bases.",
     thumbnail: "",
     techStack: [
       "Ollama",
@@ -153,6 +167,10 @@ export const Projects: ProjectInterface[] = [
     category: ["Automation", "Backend"],
     shortDescription:
       "A collection of experiments using workflow automation and LLMs to transform structured inputs into useful, validated outputs.",
+    shortDescriptionVi:
+      "Hệ thống tự động hóa luồng công việc tích hợp các API bên ngoài, quy trình trích xuất dữ liệu và đồng bộ định kỳ kết hợp LLM.",
+    shortDescriptionEn:
+      "A collection of experiments using workflow automation and LLMs to transform structured inputs into useful, validated outputs.",
     thumbnail: "",
     techStack: ["n8n", "Gemini", "REST APIs", "JSON", "TypeScript"],
     startDate: new Date(NaN),
@@ -185,6 +203,10 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Infrastructure", "Backend"],
     shortDescription:
+      "A hands-on infrastructure lab exploring highly available PostgreSQL deployments and automated database failover across multiple Linux nodes.",
+    shortDescriptionVi:
+      "Kiến trúc cụm cơ sở dữ liệu PostgreSQL có tính sẵn sàng cao với cơ chế tự động chuyển đổi dự phòng và giám sát đồng bộ.",
+    shortDescriptionEn:
       "A hands-on infrastructure lab exploring highly available PostgreSQL deployments and automated database failover across multiple Linux nodes.",
     thumbnail: "",
     techStack: ["PostgreSQL", "Patroni", "etcd", "HAProxy", "Docker", "Linux"],
@@ -220,6 +242,10 @@ export const Projects: ProjectInterface[] = [
     category: ["Web Application", "Web Dev", "Full Stack"],
     shortDescription:
       "Phần mềm nghiệp vụ khởi tạo và luân chuyển hồ sơ tín dụng vượt thẩm quyền từ chi nhánh lên Trụ sở chính (TSC).",
+    shortDescriptionVi:
+      "Phần mềm nghiệp vụ khởi tạo và luân chuyển hồ sơ tín dụng vượt thẩm quyền từ chi nhánh lên Trụ sở chính (TSC).",
+    shortDescriptionEn:
+      "Specialized banking workflow software for initiating and routing credit files requiring Head Office approval.",
     websiteLink: "https://sdtn-project.web.app/",
     thumbnail: "",
     techStack: [
@@ -263,6 +289,10 @@ export const Projects: ProjectInterface[] = [
     category: ["Web Application", "Full Stack", "Developer Platform"],
     shortDescription:
       "Nền tảng rà soát, theo dõi và phê duyệt tài liệu phân tích nghiệp vụ và yêu cầu hệ thống Khởi tạo khoản vay (LOS).",
+    shortDescriptionVi:
+      "Nền tảng rà soát, theo dõi và phê duyệt tài liệu phân tích nghiệp vụ và yêu cầu hệ thống Khởi tạo khoản vay (LOS).",
+    shortDescriptionEn:
+      "Collaborative review platform for tracking, evaluating, and approving business requirements and system specifications for Loan Origination Systems (LOS).",
     websiteLink: "http://los.anhht.me/",
     thumbnail: "",
     techStack: [
@@ -304,6 +334,10 @@ export const Projects: ProjectInterface[] = [
     category: ["Web Application", "Web Dev", "Full Stack"],
     shortDescription:
       "Nền tảng cộng đồng chia sẻ tri thức, tài liệu nghiệp vụ, công cụ phần mềm và kinh nghiệm làm việc cho cán bộ ngân hàng.",
+    shortDescriptionVi:
+      "Nền tảng cộng đồng chia sẻ tri thức, tài liệu nghiệp vụ, công cụ phần mềm và kinh nghiệm làm việc cho cán bộ ngân hàng.",
+    shortDescriptionEn:
+      "An internal knowledge-sharing community platform connecting banking professionals with operational guidelines, software utilities, and technical workflows.",
     websiteLink: "https://community.agribank.me/",
     thumbnail: "",
     techStack: [

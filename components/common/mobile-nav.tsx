@@ -4,6 +4,7 @@ import * as React from "react";
 
 import { siteConfig } from "@/config/site";
 import { useLockBody } from "@/hooks/use-lock-body";
+import { useLocale } from "@/hooks/use-locale";
 import { cn } from "@/lib/utils";
 
 interface MobileNavProps {
@@ -20,6 +21,17 @@ const norican = Norican({
 
 export function MobileNav({ items, children }: MobileNavProps) {
   useLockBody();
+  const { t } = useLocale();
+
+  const getNavTitle = (href: string, fallback: string) => {
+    if (href === "/projects") return t.nav.projects;
+    if (href === "/experience") return t.nav.experience;
+    if (href === "/skills") return t.nav.skills;
+    if (href === "/blogs") return t.nav.blogs;
+    if (href === "/contact") return t.nav.contact;
+    if (href === "/resume") return t.nav.resume;
+    return fallback;
+  };
 
   return (
     <div
@@ -43,7 +55,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
             >
-              {item.title}
+              {getNavTitle(item.href, item.title)}
             </Link>
           ))}
         </nav>

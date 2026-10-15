@@ -9,6 +9,7 @@ import * as React from "react";
 import { Icons } from "@/components/common/icons";
 import { MobileNav } from "@/components/common/mobile-nav";
 import { siteConfig } from "@/config/site";
+import { useLocale } from "@/hooks/use-locale";
 import { cn } from "@/lib/utils";
 
 interface MainNavProps {
@@ -41,10 +42,21 @@ export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
+  const { t } = useLocale();
 
   React.useEffect(() => {
     setShowMobileMenu(false);
   }, [pathname]);
+
+  const getNavTitle = (href: string, fallback: string) => {
+    if (href === "/projects") return t.nav.projects;
+    if (href === "/experience") return t.nav.experience;
+    if (href === "/skills") return t.nav.skills;
+    if (href === "/blogs") return t.nav.blogs;
+    if (href === "/contact") return t.nav.contact;
+    if (href === "/resume") return t.nav.resume;
+    return fallback;
+  };
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -81,7 +93,7 @@ export function MainNav({ items, children }: MainNavProps) {
                   item.disabled && "cursor-not-allowed opacity-80"
                 )}
               >
-                {item.title}
+                {getNavTitle(item.href, item.title)}
               </Link>
             </motion.div>
           ))}
@@ -94,7 +106,7 @@ export function MainNav({ items, children }: MainNavProps) {
         whileTap={{ scale: 0.95 }}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.menu />}
-        <span className="font-bold">Menu</span>
+        <span className="font-bold">{t.nav.menu}</span>
       </motion.button>
       {showMobileMenu && items && (
         <MobileNav items={items}>{children}</MobileNav>

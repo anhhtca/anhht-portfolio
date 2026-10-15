@@ -8,21 +8,12 @@ import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import { ExperienceInterface } from "@/config/experience";
 
+import { useLocale } from "@/hooks/use-locale";
+
 // Helper function to extract year from date
 const getYearFromDate = (date: Date): string => {
   const d = new Date(date);
   return isNaN(d.getTime()) ? "" : d.getFullYear().toString();
-};
-
-// Helper function to get duration text
-const getDurationText = (
-  startDate: Date,
-  endDate: Date | "Present"
-): string => {
-  const startYear = getYearFromDate(startDate);
-  const endYear =
-    typeof endDate === "string" ? "Present" : getYearFromDate(endDate);
-  return startYear ? `${startYear} - ${endYear}` : endYear;
 };
 
 interface ExperienceCardProps {
@@ -30,6 +21,28 @@ interface ExperienceCardProps {
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
+  const { locale, t } = useLocale();
+
+  const getDurationText = (
+    startDate: Date,
+    endDate: Date | "Present"
+  ): string => {
+    const startYear = getYearFromDate(startDate);
+    const endYear =
+      typeof endDate === "string" ? t.common.present : getYearFromDate(endDate);
+    return startYear ? `${startYear} - ${endYear}` : endYear;
+  };
+
+  const localizedPosition =
+    locale === "vi"
+      ? experience.positionVi || experience.position
+      : experience.position;
+
+  const localizedDesc =
+    locale === "vi"
+      ? experience.descriptionVi?.[0] || experience.description[0]
+      : experience.description[0];
+
   return (
     <div className="group relative overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
       <div className="flex items-start gap-3 sm:gap-4">
@@ -48,7 +61,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           <div className="flex flex-col gap-1 sm:gap-2">
             <div className="flex items-start sm:items-center gap-2">
               <h3 className="text-base sm:text-lg font-bold text-foreground line-clamp-2 sm:line-clamp-1">
-                {experience.position}
+                {localizedPosition}
               </h3>
               {experience.companyUrl && (
                 <a
@@ -73,7 +86,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             </div>
           </div>
           <p className="mt-2 sm:mt-3 text-sm text-muted-foreground line-clamp-2">
-            {experience.description[0]}
+            {localizedDesc}
           </p>
           <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">
             {experience.skills.slice(0, 2).map((skill, index) => (
@@ -100,7 +113,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           asChild
         >
           <Link href={`/experience/${experience.id}`}>
-            View Details
+            {t.common.readMore}
             <Icons.chevronRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
