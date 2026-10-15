@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Tuan Anh | Fullstack Developer & AI Builder",
+  name: "Hoang Tuan Anh | Fullstack Developer & AI Builder",
   authorName: "Tuấn Anh",
   username: "anhhtz",
   title: "Fullstack Developer & AI Builder",
@@ -7,7 +7,7 @@ export const siteConfig = {
     "Building useful software. Exploring AI. Automating the boring stuff.",
   location: "Ho Chi Minh City, Vietnam",
   description:
-    "Personal portfolio of Tuan Anh, a fullstack developer exploring AI engineering, LLM applications, automation, and modern software architecture.",
+    "Personal portfolio of Hoang Tuan Anh, a fullstack developer exploring AI engineering, LLM applications, automation, and modern software architecture.",
   bio: "Software developer and technology enthusiast focused on fullstack development, AI engineering, and automation. I enjoy turning ideas into practical products, designing reliable systems, and exploring how AI can solve real-world problems.",
   longBio:
     "I have a strong background in IT operations, database administration, and software development. My work spans the full software lifecycle, from data modeling and backend engineering to user interfaces, infrastructure, and deployment. Today, I am increasingly focused on AI engineering, large language models, retrieval-augmented generation, and intelligent automation. I believe the best technology is not just innovative; it is useful, reliable, and built to solve real problems.",
@@ -21,7 +21,7 @@ export const siteConfig = {
   iconIco: "/favicon.ico",
   logoIcon: "/logo.png",
   keywords: [
-    "Tuan Anh",
+    "Hoang Tuan Anh",
     "Tuấn Anh",
     "Fullstack Developer",
     "AI Builder",

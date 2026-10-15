@@ -71,7 +71,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "ums",
-    companyName: "Unified Management System (UMS)",
+    companyName: "Users Management System (UMS)",
     type: "Personal",
     category: ["Developer Platform", "Full Stack", "Backend"],
     shortDescription:
@@ -115,126 +115,8 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
-  {
-    id: "local-ai-knowledge-assistant",
-    companyName: "Local AI Knowledge Assistant",
-    type: "Personal",
-    category: ["AI Engineering", "Backend"],
-    shortDescription:
-      "An exploration of privacy-focused AI applications using locally hosted language models to retrieve information from documents and domain-specific knowledge bases.",
-    shortDescriptionVi:
-      "Trợ lý tri thức AI nội bộ ưu tiên bảo mật, hoạt động hoàn toàn offline trên phần cứng cá nhân sử dụng các mô hình LLM mã nguồn mở và RAG.",
-    shortDescriptionEn:
-      "An exploration of privacy-focused AI applications using locally hosted language models to retrieve information from documents and domain-specific knowledge bases.",
-    thumbnail: "",
-    techStack: [
-      "Ollama",
-      "LLMs",
-      "RAG",
-      "Embeddings",
-      "Vector Search",
-      "TypeScript",
-    ],
-    startDate: new Date(NaN),
-    endDate: new Date(NaN),
-    companyLogoImg: "/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Private Local Knowledge Retrieval",
-        description:
-          "Privacy-first architecture using local language models to query internal documents and bilingual domain corpora.",
-        imgArr: [],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "An exploration of privacy-focused AI applications using locally hosted language models to retrieve information from documents and domain-specific knowledge bases.",
-        "Built on a local Retrieval-Augmented Generation (RAG) architecture supporting document ingestion, semantic search embeddings, and Vietnamese-language knowledge retrieval without external API leakage.",
-      ],
-      bullets: [
-        "Local LLM inference",
-        "Retrieval-Augmented Generation architecture",
-        "Document ingestion and semantic retrieval",
-        "Vietnamese-language knowledge retrieval",
-        "Privacy-conscious AI deployment",
-      ],
-    },
-  },
-  {
-    id: "workflow-automation",
-    companyName: "AI Workflow Automation",
-    type: "Personal",
-    category: ["Automation", "Backend"],
-    shortDescription:
-      "A collection of experiments using workflow automation and LLMs to transform structured inputs into useful, validated outputs.",
-    shortDescriptionVi:
-      "Hệ thống tự động hóa luồng công việc tích hợp các API bên ngoài, quy trình trích xuất dữ liệu và đồng bộ định kỳ kết hợp LLM.",
-    shortDescriptionEn:
-      "A collection of experiments using workflow automation and LLMs to transform structured inputs into useful, validated outputs.",
-    thumbnail: "",
-    techStack: ["n8n", "Gemini", "REST APIs", "JSON", "TypeScript"],
-    startDate: new Date(NaN),
-    endDate: new Date(NaN),
-    companyLogoImg: "/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Automated Data Processing Pipelines",
-        description:
-          "Integrates workflow automation tools with LLM nodes to automate multi-stage data transformation pipelines.",
-        imgArr: [],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "A collection of experiments using workflow automation and LLMs to transform structured inputs into useful, validated outputs.",
-        "Orchestrates event triggers, schema validation, and structured JSON output generation across automated processing pipelines.",
-      ],
-      bullets: [
-        "LLM-powered data transformation",
-        "Structured JSON generation",
-        "Automated document processing",
-        "API-based workflow orchestration",
-      ],
-    },
-  },
-  {
-    id: "postgresql-ha-lab",
-    companyName: "PostgreSQL High Availability Lab",
-    type: "Personal",
-    category: ["Infrastructure", "Backend"],
-    shortDescription:
-      "A hands-on infrastructure lab exploring highly available PostgreSQL deployments and automated database failover across multiple Linux nodes.",
-    shortDescriptionVi:
-      "Kiến trúc cụm cơ sở dữ liệu PostgreSQL có tính sẵn sàng cao với cơ chế tự động chuyển đổi dự phòng và giám sát đồng bộ.",
-    shortDescriptionEn:
-      "A hands-on infrastructure lab exploring highly available PostgreSQL deployments and automated database failover across multiple Linux nodes.",
-    thumbnail: "",
-    techStack: ["PostgreSQL", "Patroni", "etcd", "HAProxy", "Docker", "Linux"],
-    startDate: new Date(NaN),
-    endDate: new Date(NaN),
-    companyLogoImg: "/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Database Cluster Architecture",
-        description:
-          "Containerized high-availability deployment featuring automated failover and consensus coordination.",
-        imgArr: [],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "A hands-on infrastructure lab exploring highly available PostgreSQL deployments and automated database failover across multiple Linux nodes.",
-        "Implements Patroni for cluster management, etcd for distributed coordination, and HAProxy for resilient client routing under simulated node failover.",
-      ],
-      bullets: [
-        "PostgreSQL replication and failover",
-        "Patroni cluster management",
-        "etcd distributed coordination",
-        "HAProxy connection routing",
-        "Containerized infrastructure",
-      ],
-    },
-  },
+  
+ 
   {
     id: "sdtn-project",
     companyName: "SDTN - Credit File Transfer System",

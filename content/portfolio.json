@@ -1,397 +1,415 @@
 {
-  "site": {
-    "name": "Tuấn Anh",
-    "fullName": "Tuan Anh",
-    "username": "anhhtz",
-    "title": "Fullstack Developer & AI Builder",
-    "tagline": "Building useful software. Exploring AI. Automating the boring stuff.",
-    "location": "Ho Chi Minh City, Vietnam",
-    "bio": "Software developer and technology enthusiast focused on fullstack development, AI engineering, and automation. I enjoy turning ideas into practical products, designing reliable systems, and exploring how AI can solve real-world problems.",
-    "longBio": "I have a strong background in IT operations, database administration, and software development. My work spans the full software lifecycle, from data modeling and backend engineering to user interfaces, infrastructure, and deployment. Today, I am increasingly focused on AI engineering, large language models, retrieval-augmented generation, and intelligent automation. I believe the best technology is not just innovative; it is useful, reliable, and built to solve real problems.",
-    "interests": [
-      "Fullstack Development",
-      "AI Engineering",
-      "Large Language Models",
-      "Developer Tools",
-      "Workflow Automation",
-      "System Architecture",
-      "Open Source"
+    "site": {
+        "name": "Tuấn Anh",
+        "fullName": "Hoang Tuan Anh",
+        "username": "anhhtz",
+        "title": "Fullstack Developer & AI Builder",
+        "tagline": "Building useful software. Exploring AI. Automating the boring stuff.",
+        "location": "Ho Chi Minh City, Vietnam",
+        "bio": "Software developer and technology enthusiast focused on fullstack development, AI engineering, and automation. I enjoy turning ideas into practical products, designing reliable systems, and exploring how AI can solve real-world problems.",
+        "longBio": "I have a strong background in IT operations, database administration, and software development. My work spans the full software lifecycle, from data modeling and backend engineering to user interfaces, infrastructure, and deployment. Today, I am increasingly focused on AI engineering, large language models, retrieval-augmented generation, and intelligent automation. I believe the best technology is not just innovative; it is useful, reliable, and built to solve real problems.",
+        "interests": [
+            "Fullstack Development",
+            "AI Engineering",
+            "Large Language Models",
+            "Developer Tools",
+            "Workflow Automation",
+            "System Architecture",
+            "Open Source"
+        ],
+        "availability": "Open to interesting projects and technical collaborations",
+        "website": "",
+        "email": "",
+        "avatar": "/images/avatar.png"
+    },
+    "seo": {
+        "title": "Hoang Tuan Anh | Fullstack Developer & AI Builder",
+        "description": "Personal portfolio of Hoang Tuan Anh, a fullstack developer exploring AI engineering, LLM applications, automation, and modern software architecture.",
+        "keywords": [
+            "Hoang Tuan Anh",
+            "Fullstack Developer",
+            "AI Engineer",
+            "AI Engineering",
+            "Next.js",
+            "TypeScript",
+            "Node.js",
+            ".NET",
+            "LLM",
+            "RAG",
+            "Automation",
+            "PostgreSQL"
+        ],
+        "locale": "en_US"
+    },
+    "socials": [
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/anhhtz"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": ""
+        },
+        {
+            "platform": "Buy Me a Coffee",
+            "url": ""
+        },
+        {
+            "platform": "Email",
+            "url": ""
+        }
     ],
-    "availability": "Open to interesting projects and technical collaborations",
-    "website": "",
-    "email": "",
-    "avatar": "/images/avatar.png"
-  },
-  "seo": {
-    "title": "Tuan Anh | Fullstack Developer & AI Builder",
-    "description": "Personal portfolio of Tuan Anh, a fullstack developer exploring AI engineering, LLM applications, automation, and modern software architecture.",
-    "keywords": [
-      "Tuan Anh",
-      "Fullstack Developer",
-      "AI Engineer",
-      "AI Engineering",
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      ".NET",
-      "LLM",
-      "RAG",
-      "Automation",
-      "PostgreSQL"
+    "skills": [
+        {
+            "category": "Frontend Development",
+            "items": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
+            "category": "Backend Development",
+            "items": [
+                "Node.js",
+                ".NET",
+                "REST APIs",
+                "Authentication",
+                "Authorization",
+                "API Design"
+            ]
+        },
+        {
+            "category": "Databases",
+            "items": [
+                "PostgreSQL",
+                "Oracle Database",
+                "Prisma ORM",
+                "SQL",
+                "Database Administration",
+                "Data Modeling"
+            ]
+        },
+        {
+            "category": "AI Engineering",
+            "items": [
+                "LLMs",
+                "Prompt Engineering",
+                "Retrieval-Augmented Generation",
+                "Embeddings",
+                "Local LLMs",
+                "AI Agents"
+            ]
+        },
+        {
+            "category": "Infrastructure & DevOps",
+            "items": [
+                "Docker",
+                "Linux",
+                "Networking",
+                "Reverse Proxies",
+                "High Availability",
+                "System Administration"
+            ]
+        },
+        {
+            "category": "Engineering Practices",
+            "items": [
+                "System Architecture",
+                "Role-Based Access Control",
+                "Audit Logging",
+                "Workflow Automation",
+                "AI-Assisted Development"
+            ]
+        }
     ],
-    "locale": "en_US"
-  },
-  "socials": [
-    {
-      "platform": "GitHub",
-      "url": "https://github.com/anhhtz"
-    },
-    {
-      "platform": "LinkedIn",
-      "url": ""
-    },
-    {
-      "platform": "Buy Me a Coffee",
-      "url": ""
-    },
-    {
-      "platform": "Email",
-      "url": ""
+    "projects": [
+        {
+            "slug": "bankquiz",
+            "name": "BankQuiz",
+            "category": "Web Application",
+            "featured": true,
+            "status": "Active Development",
+            "description": "A web-based learning and assessment platform designed to make knowledge practice more engaging and accessible.",
+            "highlights": [
+                "Interactive quizzes and practice sessions",
+                "Repeated practice for incorrectly answered questions",
+                "Progress-oriented learning experience",
+                "Progressive Web App capabilities"
+            ],
+            "technologies": [
+                "Next.js",
+                "TypeScript",
+                "Prisma",
+                "PostgreSQL"
+            ],
+            "website": "https://bankquiz.app",
+            "repository": "",
+            "visibility": "Public",
+            "thumbnail": ""
+        },
+        {
+            "slug": "ums",
+            "name": "Unified Management System (UMS)",
+            "category": "Developer Platform",
+            "featured": true,
+            "status": "Built",
+            "description": "A centralized identity and access management platform designed to support multiple applications with shared authentication and application-specific authorization.",
+            "highlights": [
+                "Centralized identity management",
+                "Application-level role and permission separation",
+                "Resource-action-based RBAC",
+                "JWT authentication and audit logging",
+                "Reusable client integration for web applications"
+            ],
+            "technologies": [
+                "Next.js",
+                "TypeScript",
+                "Authentication",
+                "JWT",
+                "RBAC",
+                "Docker"
+            ],
+            "website": "https://ums.io.vn",
+            "apiDocumentation": "https://docs.ums.io.vn",
+            "repository": "",
+            "visibility": "Public",
+            "thumbnail": ""
+        },
+        {
+            "slug": "local-ai-knowledge-assistant",
+            "name": "Local AI Knowledge Assistant",
+            "category": "AI Engineering",
+            "featured": true,
+            "status": "Research & Experimentation",
+            "description": "An exploration of privacy-focused AI applications using locally hosted language models to retrieve information from documents and domain-specific knowledge bases.",
+            "highlights": [
+                "Local LLM inference",
+                "Retrieval-Augmented Generation architecture",
+                "Document ingestion and semantic retrieval",
+                "Vietnamese-language knowledge retrieval",
+                "Privacy-conscious AI deployment"
+            ],
+            "technologies": [
+                "Ollama",
+                "LLMs",
+                "RAG",
+                "Embeddings",
+                "Vector Search",
+                "TypeScript"
+            ],
+            "website": "",
+            "repository": "",
+            "visibility": "Research",
+            "thumbnail": ""
+        },
+        {
+            "slug": "workflow-automation",
+            "name": "AI Workflow Automation",
+            "category": "Automation",
+            "featured": false,
+            "status": "Experimentation",
+            "description": "A collection of experiments using workflow automation and LLMs to transform structured inputs into useful, validated outputs.",
+            "highlights": [
+                "LLM-powered data transformation",
+                "Structured JSON generation",
+                "Automated document processing",
+                "API-based workflow orchestration"
+            ],
+            "technologies": [
+                "n8n",
+                "Gemini",
+                "REST APIs",
+                "JSON",
+                "TypeScript"
+            ],
+            "website": "",
+            "repository": "",
+            "visibility": "Public",
+            "thumbnail": ""
+        },
+        {
+            "slug": "postgresql-ha-lab",
+            "name": "PostgreSQL High Availability Lab",
+            "category": "Infrastructure",
+            "featured": false,
+            "status": "Lab",
+            "description": "A hands-on infrastructure lab exploring highly available PostgreSQL deployments and automated database failover across multiple Linux nodes.",
+            "highlights": [
+                "PostgreSQL replication and failover",
+                "Patroni cluster management",
+                "etcd distributed coordination",
+                "HAProxy connection routing",
+                "Containerized infrastructure"
+            ],
+            "technologies": [
+                "PostgreSQL",
+                "Patroni",
+                "etcd",
+                "HAProxy",
+                "Docker",
+                "Linux"
+            ],
+            "website": "",
+            "repository": "",
+            "visibility": "Lab",
+            "thumbnail": ""
+        },
+        {
+            "slug": "sdtn-project",
+            "name": "SDTN - Credit File Transfer System",
+            "category": "Web Application",
+            "featured": false,
+            "status": "Production",
+            "description": "Phần mềm nghiệp vụ khởi tạo và luân chuyển hồ sơ tín dụng vượt thẩm quyền từ chi nhánh lên Trụ sở chính (TSC).",
+            "highlights": [
+                "Khởi tạo và luân chuyển hồ sơ tín dụng đa cấp độ",
+                "Theo dõi tiến độ thẩm định và phê duyệt thời gian thực",
+                "Phân quyền truy cập và bảo mật hồ sơ tài liệu chặt chẽ",
+                "Giao diện tối ưu hóa nghiệp vụ cho cán bộ tín dụng và cấp quản lý"
+            ],
+            "technologies": [
+                "React",
+                "TypeScript",
+                "JavaScript",
+                "REST APIs",
+                "Authentication"
+            ],
+            "website": "https://sdtn-project.web.app/",
+            "repository": "",
+            "visibility": "Public",
+            "thumbnail": ""
+        },
+        {
+            "slug": "agribank-los-reviewer",
+            "name": "Agribank LOS Reviewer",
+            "category": "Web Application",
+            "featured": false,
+            "status": "Active Development",
+            "description": "Nền tảng rà soát, theo dõi và phê duyệt tài liệu phân tích nghiệp vụ và yêu cầu hệ thống Khởi tạo khoản vay (LOS).",
+            "highlights": [
+                "Rà soát và quản lý tài liệu phân tích nghiệp vụ LOS",
+                "Kiểm soát phiên bản và lịch sử thay đổi tài liệu yêu cầu",
+                "Tích hợp xác thực, phân quyền vai trò người dùng (RBAC)",
+                "Giao diện dashboard hiện đại với trải nghiệm người dùng trực quan"
+            ],
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Authentication",
+                "RBAC",
+                "REST APIs"
+            ],
+            "website": "http://los.anhht.me/",
+            "repository": "",
+            "visibility": "Public",
+            "thumbnail": ""
+        },
+        {
+            "slug": "agribank-community",
+            "name": "Agribank Community",
+            "category": "Web Application",
+            "featured": false,
+            "status": "Production",
+            "description": "Nền tảng cộng đồng chia sẻ tri thức, tài liệu nghiệp vụ, công cụ phần mềm và kinh nghiệm làm việc cho cán bộ ngân hàng.",
+            "highlights": [
+                "Chia sẻ và tiếp cận tài liệu nghiệp vụ, cẩm nang quy trình chuyên môn",
+                "Cung cấp các công cụ và phần mềm tiện ích nâng cao năng suất",
+                "Diễn đàn trao đổi kinh nghiệm công việc và giải đáp vướng mắc nghiệp vụ",
+                "Hệ thống phân phối nội dung tốc độ cao, giao diện chuẩn hóa hiện đại"
+            ],
+            "technologies": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Node.js",
+                "Tailwind CSS",
+                "REST APIs"
+            ],
+            "website": "https://community.agribank.me/",
+            "repository": "",
+            "visibility": "Public",
+            "thumbnail": ""
+        },
+        {
+            "slug": "smart-tab-cleaner",
+            "name": "Smart Tab Cleaner",
+            "category": "Browser Extension",
+            "featured": false,
+            "status": "Production",
+            "description": "Chrome Extension tự động dọn dẹp các tab thừa, liên kết chuyển hướng spam và tab launcher trung gian (Zoom, Teams, Telegram) bằng biểu thức regex thông minh và đồng bộ Google Cloud.",
+            "highlights": [
+                "Tự động đóng tab theo quy tắc regex và đếm ngược tùy chỉnh",
+                "Chặn nhanh chỉ với 1 click trực tiếp từ lịch sử và tab đang mở",
+                "Đồng bộ cấu hình mã hóa qua Google Chrome Cloud Sync",
+                "100% Cục bộ (Client-Side), không theo dõi, không quảng cáo (Zero Tracking)",
+                "Tương thích chuẩn Manifest V3 và giao diện hiện đại"
+            ],
+            "technologies": [
+                "Chrome Extension",
+                "Manifest V3",
+                "JavaScript",
+                "HTML 5",
+                "CSS 3",
+                "Tailwind CSS"
+            ],
+            "website": "https://anhhtz.github.io/smart-tab-cleaner-extension/",
+            "repository": "https://github.com/anhhtz/smart-tab-cleaner-extension",
+            "visibility": "Public",
+            "thumbnail": "/smart-tab-cleaner-icon.png"
+        }
+    ],
+    "experience": [
+        {
+            "role": "IT Operations & Database Administration",
+            "organization": "Enterprise IT Environment",
+            "type": "Professional Experience",
+            "description": "Experience in IT operations, database administration, application support, infrastructure management, and enterprise system reliability.",
+            "highlights": [
+                "Database administration and troubleshooting",
+                "Application deployment and operational support",
+                "Linux systems and infrastructure management",
+                "Data integrity, system availability, and security",
+                "Collaboration with software and infrastructure teams"
+            ],
+            "startDate": "",
+            "endDate": "",
+            "current": true
+        },
+        {
+            "role": "Fullstack Developer & Independent Builder",
+            "organization": "Independent Projects",
+            "type": "Software Development",
+            "description": "Designing and building web applications, reusable platforms, and AI-powered prototypes from concept to deployment.",
+            "highlights": [
+                "Building fullstack applications with modern web technologies",
+                "Designing APIs, data models, and authentication systems",
+                "Integrating AI capabilities into practical workflows",
+                "Using AI-assisted development tools to accelerate delivery",
+                "Deploying and operating self-hosted services"
+            ],
+            "startDate": "",
+            "endDate": "",
+            "current": true
+        }
+    ],
+    "contributions": [],
+    "currentlyLearning": [
+        "Production-grade AI application architecture",
+        "Advanced RAG and document retrieval",
+        "LLM evaluation and structured generation",
+        "AI agents and workflow orchestration",
+        "Scalable backend and identity platform design"
+    ],
+    "contact": {
+        "heading": "Let's Build Something Useful",
+        "description": "I'm always interested in exchanging ideas, exploring emerging technologies, and collaborating on practical software and AI projects.",
+        "email": "",
+        "buyMeACoffee": "",
+        "showContactForm": true
     }
-  ],
-  "skills": [
-    {
-      "category": "Frontend Development",
-      "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS"]
-    },
-    {
-      "category": "Backend Development",
-      "items": [
-        "Node.js",
-        ".NET",
-        "REST APIs",
-        "Authentication",
-        "Authorization",
-        "API Design"
-      ]
-    },
-    {
-      "category": "Databases",
-      "items": [
-        "PostgreSQL",
-        "Oracle Database",
-        "Prisma ORM",
-        "SQL",
-        "Database Administration",
-        "Data Modeling"
-      ]
-    },
-    {
-      "category": "AI Engineering",
-      "items": [
-        "LLMs",
-        "Prompt Engineering",
-        "Retrieval-Augmented Generation",
-        "Embeddings",
-        "Local LLMs",
-        "AI Agents"
-      ]
-    },
-    {
-      "category": "Infrastructure & DevOps",
-      "items": [
-        "Docker",
-        "Linux",
-        "Networking",
-        "Reverse Proxies",
-        "High Availability",
-        "System Administration"
-      ]
-    },
-    {
-      "category": "Engineering Practices",
-      "items": [
-        "System Architecture",
-        "Role-Based Access Control",
-        "Audit Logging",
-        "Workflow Automation",
-        "AI-Assisted Development"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "slug": "bankquiz",
-      "name": "BankQuiz",
-      "category": "Web Application",
-      "featured": true,
-      "status": "Active Development",
-      "description": "A web-based learning and assessment platform designed to make knowledge practice more engaging and accessible.",
-      "highlights": [
-        "Interactive quizzes and practice sessions",
-        "Repeated practice for incorrectly answered questions",
-        "Progress-oriented learning experience",
-        "Progressive Web App capabilities"
-      ],
-      "technologies": ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-      "website": "https://bankquiz.app",
-      "repository": "",
-      "visibility": "Public",
-      "thumbnail": ""
-    },
-    {
-      "slug": "ums",
-      "name": "Unified Management System (UMS)",
-      "category": "Developer Platform",
-      "featured": true,
-      "status": "Built",
-      "description": "A centralized identity and access management platform designed to support multiple applications with shared authentication and application-specific authorization.",
-      "highlights": [
-        "Centralized identity management",
-        "Application-level role and permission separation",
-        "Resource-action-based RBAC",
-        "JWT authentication and audit logging",
-        "Reusable client integration for web applications"
-      ],
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "Authentication",
-        "JWT",
-        "RBAC",
-        "Docker"
-      ],
-      "website": "https://ums.io.vn",
-      "apiDocumentation": "https://docs.ums.io.vn",
-      "repository": "",
-      "visibility": "Public",
-      "thumbnail": ""
-    },
-    {
-      "slug": "local-ai-knowledge-assistant",
-      "name": "Local AI Knowledge Assistant",
-      "category": "AI Engineering",
-      "featured": true,
-      "status": "Research & Experimentation",
-      "description": "An exploration of privacy-focused AI applications using locally hosted language models to retrieve information from documents and domain-specific knowledge bases.",
-      "highlights": [
-        "Local LLM inference",
-        "Retrieval-Augmented Generation architecture",
-        "Document ingestion and semantic retrieval",
-        "Vietnamese-language knowledge retrieval",
-        "Privacy-conscious AI deployment"
-      ],
-      "technologies": [
-        "Ollama",
-        "LLMs",
-        "RAG",
-        "Embeddings",
-        "Vector Search",
-        "TypeScript"
-      ],
-      "website": "",
-      "repository": "",
-      "visibility": "Research",
-      "thumbnail": ""
-    },
-    {
-      "slug": "workflow-automation",
-      "name": "AI Workflow Automation",
-      "category": "Automation",
-      "featured": false,
-      "status": "Experimentation",
-      "description": "A collection of experiments using workflow automation and LLMs to transform structured inputs into useful, validated outputs.",
-      "highlights": [
-        "LLM-powered data transformation",
-        "Structured JSON generation",
-        "Automated document processing",
-        "API-based workflow orchestration"
-      ],
-      "technologies": ["n8n", "Gemini", "REST APIs", "JSON", "TypeScript"],
-      "website": "",
-      "repository": "",
-      "visibility": "Public",
-      "thumbnail": ""
-    },
-    {
-      "slug": "postgresql-ha-lab",
-      "name": "PostgreSQL High Availability Lab",
-      "category": "Infrastructure",
-      "featured": false,
-      "status": "Lab",
-      "description": "A hands-on infrastructure lab exploring highly available PostgreSQL deployments and automated database failover across multiple Linux nodes.",
-      "highlights": [
-        "PostgreSQL replication and failover",
-        "Patroni cluster management",
-        "etcd distributed coordination",
-        "HAProxy connection routing",
-        "Containerized infrastructure"
-      ],
-      "technologies": [
-        "PostgreSQL",
-        "Patroni",
-        "etcd",
-        "HAProxy",
-        "Docker",
-        "Linux"
-      ],
-      "website": "",
-      "repository": "",
-      "visibility": "Lab",
-      "thumbnail": ""
-    },
-    {
-      "slug": "sdtn-project",
-      "name": "SDTN - Credit File Transfer System",
-      "category": "Web Application",
-      "featured": false,
-      "status": "Production",
-      "description": "Phần mềm nghiệp vụ khởi tạo và luân chuyển hồ sơ tín dụng vượt thẩm quyền từ chi nhánh lên Trụ sở chính (TSC).",
-      "highlights": [
-        "Khởi tạo và luân chuyển hồ sơ tín dụng đa cấp độ",
-        "Theo dõi tiến độ thẩm định và phê duyệt thời gian thực",
-        "Phân quyền truy cập và bảo mật hồ sơ tài liệu chặt chẽ",
-        "Giao diện tối ưu hóa nghiệp vụ cho cán bộ tín dụng và cấp quản lý"
-      ],
-      "technologies": [
-        "React",
-        "TypeScript",
-        "JavaScript",
-        "REST APIs",
-        "Authentication"
-      ],
-      "website": "https://sdtn-project.web.app/",
-      "repository": "",
-      "visibility": "Public",
-      "thumbnail": ""
-    },
-    {
-      "slug": "agribank-los-reviewer",
-      "name": "Agribank LOS Reviewer",
-      "category": "Web Application",
-      "featured": false,
-      "status": "Active Development",
-      "description": "Nền tảng rà soát, theo dõi và phê duyệt tài liệu phân tích nghiệp vụ và yêu cầu hệ thống Khởi tạo khoản vay (LOS).",
-      "highlights": [
-        "Rà soát và quản lý tài liệu phân tích nghiệp vụ LOS",
-        "Kiểm soát phiên bản và lịch sử thay đổi tài liệu yêu cầu",
-        "Tích hợp xác thực, phân quyền vai trò người dùng (RBAC)",
-        "Giao diện dashboard hiện đại với trải nghiệm người dùng trực quan"
-      ],
-      "technologies": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Authentication",
-        "RBAC",
-        "REST APIs"
-      ],
-      "website": "http://los.anhht.me/",
-      "repository": "",
-      "visibility": "Public",
-      "thumbnail": ""
-    },
-    {
-      "slug": "agribank-community",
-      "name": "Agribank Community",
-      "category": "Web Application",
-      "featured": false,
-      "status": "Production",
-      "description": "Nền tảng cộng đồng chia sẻ tri thức, tài liệu nghiệp vụ, công cụ phần mềm và kinh nghiệm làm việc cho cán bộ ngân hàng.",
-      "highlights": [
-        "Chia sẻ và tiếp cận tài liệu nghiệp vụ, cẩm nang quy trình chuyên môn",
-        "Cung cấp các công cụ và phần mềm tiện ích nâng cao năng suất",
-        "Diễn đàn trao đổi kinh nghiệm công việc và giải đáp vướng mắc nghiệp vụ",
-        "Hệ thống phân phối nội dung tốc độ cao, giao diện chuẩn hóa hiện đại"
-      ],
-      "technologies": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Tailwind CSS",
-        "REST APIs"
-      ],
-      "website": "https://community.agribank.me/",
-      "repository": "",
-      "visibility": "Public",
-      "thumbnail": ""
-    },
-    {
-      "slug": "smart-tab-cleaner",
-      "name": "Smart Tab Cleaner",
-      "category": "Browser Extension",
-      "featured": false,
-      "status": "Production",
-      "description": "Chrome Extension tự động dọn dẹp các tab thừa, liên kết chuyển hướng spam và tab launcher trung gian (Zoom, Teams, Telegram) bằng biểu thức regex thông minh và đồng bộ Google Cloud.",
-      "highlights": [
-        "Tự động đóng tab theo quy tắc regex và đếm ngược tùy chỉnh",
-        "Chặn nhanh chỉ với 1 click trực tiếp từ lịch sử và tab đang mở",
-        "Đồng bộ cấu hình mã hóa qua Google Chrome Cloud Sync",
-        "100% Cục bộ (Client-Side), không theo dõi, không quảng cáo (Zero Tracking)",
-        "Tương thích chuẩn Manifest V3 và giao diện hiện đại"
-      ],
-      "technologies": [
-        "Chrome Extension",
-        "Manifest V3",
-        "JavaScript",
-        "HTML 5",
-        "CSS 3",
-        "Tailwind CSS"
-      ],
-      "website": "https://anhhtz.github.io/smart-tab-cleaner-extension/",
-      "repository": "https://github.com/anhhtz/smart-tab-cleaner-extension",
-      "visibility": "Public",
-      "thumbnail": "/smart-tab-cleaner-icon.png"
-    }
-  ],
-  "experience": [
-    {
-      "role": "IT Operations & Database Administration",
-      "organization": "Enterprise IT Environment",
-      "type": "Professional Experience",
-      "description": "Experience in IT operations, database administration, application support, infrastructure management, and enterprise system reliability.",
-      "highlights": [
-        "Database administration and troubleshooting",
-        "Application deployment and operational support",
-        "Linux systems and infrastructure management",
-        "Data integrity, system availability, and security",
-        "Collaboration with software and infrastructure teams"
-      ],
-      "startDate": "",
-      "endDate": "",
-      "current": true
-    },
-    {
-      "role": "Fullstack Developer & Independent Builder",
-      "organization": "Independent Projects",
-      "type": "Software Development",
-      "description": "Designing and building web applications, reusable platforms, and AI-powered prototypes from concept to deployment.",
-      "highlights": [
-        "Building fullstack applications with modern web technologies",
-        "Designing APIs, data models, and authentication systems",
-        "Integrating AI capabilities into practical workflows",
-        "Using AI-assisted development tools to accelerate delivery",
-        "Deploying and operating self-hosted services"
-      ],
-      "startDate": "",
-      "endDate": "",
-      "current": true
-    }
-  ],
-  "contributions": [],
-  "currentlyLearning": [
-    "Production-grade AI application architecture",
-    "Advanced RAG and document retrieval",
-    "LLM evaluation and structured generation",
-    "AI agents and workflow orchestration",
-    "Scalable backend and identity platform design"
-  ],
-  "contact": {
-    "heading": "Let's Build Something Useful",
-    "description": "I'm always interested in exchanging ideas, exploring emerging technologies, and collaborating on practical software and AI projects.",
-    "email": "",
-    "buyMeACoffee": "",
-    "showContactForm": true
-  }
 }

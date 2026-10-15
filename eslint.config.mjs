@@ -19,5 +19,5 @@ export default [
     },
     settings: { react: { version: "detect" } },
   },
-  { ignores: [".next/*", "node_modules/*"] },
+  { ignores: [".next/*", "node_modules/*", ".contentlayer/*"] },
 ];

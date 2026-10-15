@@ -27,7 +27,7 @@ export const enLocale: LocaleDictionary = {
     resume: "Resume",
   },
   site: {
-    authorName: "Tuan Anh",
+    authorName: "Hoang Tuan Anh",
     title: "Fullstack Developer & AI Builder",
     tagline:
       "Building useful software. Exploring AI. Automating the boring stuff.",
@@ -66,7 +66,7 @@ export const enLocale: LocaleDictionary = {
     },
     resume: {
       title: "Resume",
-      description: "Resume of Tuan Anh.",
+      description: "Resume of Hoang Tuan Anh.",
       redirecting: "Redirecting to the resume...",
     },
   },
