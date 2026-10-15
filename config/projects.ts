@@ -372,6 +372,54 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
+  {
+    id: "smart-tab-cleaner",
+    companyName: "Smart Tab Cleaner",
+    type: "Personal",
+    category: ["Browser Extension", "Automation", "Frontend"],
+    shortDescription:
+      "Automated tab lifecycle and anti-clutter Chrome extension with custom rules, instant quick block, and Google Cloud Sync. 100% Client-Side & Privacy-First.",
+    shortDescriptionVi:
+      "Tiện ích Chrome tự động dọn dẹp các tab thừa, liên kết chuyển hướng spam và tab launcher trung gian (Zoom, Teams, Telegram) bằng regex và đồng bộ Google Cloud.",
+    shortDescriptionEn:
+      "Automated tab lifecycle and anti-clutter Chrome extension with custom rules, instant quick block, and Google Cloud Sync. 100% Client-Side & Privacy-First.",
+    websiteLink: "https://anhhtz.github.io/smart-tab-cleaner-extension/",
+    githubLink: "https://github.com/anhhtz/smart-tab-cleaner-extension",
+    thumbnail: "",
+    techStack: [
+      "Chrome Extension",
+      "Manifest V3",
+      "JavaScript",
+      "HTML 5",
+      "CSS 3",
+      "Tailwind CSS",
+    ],
+    startDate: new Date(NaN),
+    endDate: new Date(NaN),
+    companyLogoImg: "/smart-tab-cleaner-icon.png",
+    pagesInfoArr: [
+      {
+        title: "Automated Tab Lifecycle & Anti-Clutter",
+        description:
+          "Keep your browser clean and fast with automated rules, regex matching, customizable delay timers, and zero-tracking local privacy.",
+        imgArr: [],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Smart Tab Cleaner is a lightweight, privacy-first Chrome extension that automatically closes clutter tabs, popup ads, spam redirects, and disposable launcher links (such as Zoom, Teams, or Telegram).",
+        "It features customizable countdown delays, instant 1-click blocking from tab history, a regex tester for custom URL rules, and encrypted Chrome Sync to effortlessly synchronize configuration across devices without any external tracking or ads.",
+      ],
+      bullets: [
+        "Automated tab closing with custom regex patterns and countdown delays",
+        "1-Click quick block directly from open tabs and history",
+        "Encrypted Google Chrome Cloud Sync across devices",
+        "100% client-side execution with zero ads, analytics, or tracking",
+        "Full Manifest V3 compliance with modern shadcn-inspired interface",
+      ],
+    },
+  },
 ];
 
 export const featuredProjects = Projects.slice(0, 3);
+

@@ -98,6 +98,8 @@ export type ValidSkills =
   | "Workflow Automation"
   | "AI-Assisted Development"
   | "n8n"
+  | "Chrome Extension"
+  | "Manifest V3"
   | "JSON";
 
 export type ValidCategory =
@@ -112,6 +114,7 @@ export type ValidCategory =
   | "Developer Platform"
   | "AI Engineering"
   | "Automation"
+  | "Browser Extension"
   | "Infrastructure";
 
 export type ValidExpType = "Personal" | "Professional";

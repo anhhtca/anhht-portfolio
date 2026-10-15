@@ -19,49 +19,57 @@ import { featuredSkills } from "@/config/skills";
 import { useLocale } from "@/hooks/use-locale";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.png";
+import { TechLinesBackground } from "@/components/home/tech-lines-background";
 
 export default function HomeView() {
   const { t } = useLocale();
 
   return (
     <>
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center mt-1">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
-          <Image
-            src={profileImg}
-            height={100}
-            width={100}
-            sizes="100vw"
-            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-gray-500"
-            alt={`${t.site.authorName} - ${t.site.title}`}
-            priority
-          />
+      <section className="relative w-full overflow-hidden min-h-[calc(100vh-5rem)] flex items-center justify-center py-16 md:py-24 border-b border-border/40">
+        <TechLinesBackground />
+
+        <div className="container relative z-10 flex max-w-[64rem] flex-col items-center gap-4 text-center">
+          <div className="relative mb-2 w-[55%] max-w-[15rem] transition-transform duration-300 hover:scale-105">
+            <Image
+              src={profileImg}
+              height={100}
+              width={100}
+              sizes="100vw"
+              className="rounded-full h-auto w-full object-cover border-[3.5px] border-white ring-2 ring-white/40 shadow-lg shadow-black/30"
+              alt={`${t.site.authorName} - ${t.site.title}`}
+              priority
+            />
+          </div>
           <AnimatedText
             as="h1"
             delay={0.2}
-            className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
           >
             {t.site.authorName}
           </AnimatedText>
           <AnimatedText
             as="h3"
             delay={0.4}
-            className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
+            className="font-heading text-base sm:text-xl md:text-2xl text-slate-200 tracking-wide"
           >
             {t.site.title}
           </AnimatedText>
-          <div className="mt-4 max-w-[42rem] text-center">
-            <p className="leading-normal text-muted-foreground text-sm sm:text-base">
+          <div className="mt-3 max-w-[42rem] text-center">
+            <p className="leading-relaxed text-slate-400 text-sm sm:text-base">
               {t.site.tagline}
             </p>
           </div>
 
-          <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
+          <div className="flex flex-col mt-8 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
                 href={"/resume"}
                 target="_blank"
-                className={cn(buttonVariants({ size: "lg" }))}
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "bg-white text-slate-950 hover:bg-slate-100 font-semibold shadow-lg shadow-white/10 transition-all hover:scale-105"
+                )}
                 aria-label="View resume"
               >
                 <Icons.post className="w-4 h-4 mr-2" /> {t.common.resume}
@@ -75,7 +83,8 @@ export default function HomeView() {
                   buttonVariants({
                     variant: "outline",
                     size: "lg",
-                  })
+                  }),
+                  "border-slate-700 bg-slate-900/60 backdrop-blur text-slate-200 hover:bg-slate-800 hover:text-white hover:border-slate-500 transition-all hover:scale-105"
                 )}
                 aria-label="Contact"
               >
@@ -84,7 +93,9 @@ export default function HomeView() {
             </AnimatedText>
           </div>
           <AnimatedText delay={1.2}>
-            <Icons.chevronDown className="h-6 w-6 mt-10" />
+            <a href="#projects" aria-label="Scroll to projects">
+              <Icons.chevronDown className="h-6 w-6 text-slate-500 hover:text-slate-300 transition-colors animate-bounce mt-8 cursor-pointer" />
+            </a>
           </AnimatedText>
         </div>
       </section>

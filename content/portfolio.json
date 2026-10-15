@@ -316,6 +316,33 @@
       "repository": "",
       "visibility": "Public",
       "thumbnail": ""
+    },
+    {
+      "slug": "smart-tab-cleaner",
+      "name": "Smart Tab Cleaner",
+      "category": "Browser Extension",
+      "featured": false,
+      "status": "Production",
+      "description": "Chrome Extension tự động dọn dẹp các tab thừa, liên kết chuyển hướng spam và tab launcher trung gian (Zoom, Teams, Telegram) bằng biểu thức regex thông minh và đồng bộ Google Cloud.",
+      "highlights": [
+        "Tự động đóng tab theo quy tắc regex và đếm ngược tùy chỉnh",
+        "Chặn nhanh chỉ với 1 click trực tiếp từ lịch sử và tab đang mở",
+        "Đồng bộ cấu hình mã hóa qua Google Chrome Cloud Sync",
+        "100% Cục bộ (Client-Side), không theo dõi, không quảng cáo (Zero Tracking)",
+        "Tương thích chuẩn Manifest V3 và giao diện hiện đại"
+      ],
+      "technologies": [
+        "Chrome Extension",
+        "Manifest V3",
+        "JavaScript",
+        "HTML 5",
+        "CSS 3",
+        "Tailwind CSS"
+      ],
+      "website": "https://anhhtz.github.io/smart-tab-cleaner-extension/",
+      "repository": "https://github.com/anhhtz/smart-tab-cleaner-extension",
+      "visibility": "Public",
+      "thumbnail": "/smart-tab-cleaner-icon.png"
     }
   ],
   "experience": [

@@ -26,7 +26,7 @@ export default function PageContainer({
 
   return (
     <ClientPageWrapper>
-      <div>
+      <div className="container mx-auto">
         <PageHeader title={finalTitle} description={finalDescription} />
         <div className="mx-4 sm:mx-6 lg:mx-8 max-w-full overflow-x-hidden">
           {children}

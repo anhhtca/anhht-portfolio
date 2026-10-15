@@ -666,3 +666,108 @@
   margin: 1.5rem auto;
   display: block;
 }
+
+/* Animated Tech Lines for Hero Section */
+@keyframes techLineLeftToRight {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 120%));
+    opacity: 0;
+  }
+}
+
+@keyframes techLineRightToLeft {
+  0% {
+    transform: translateX(calc(100vw + 120%));
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+}
+
+@keyframes techLineTopToBottom {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(calc(100vh + 120%));
+    opacity: 0;
+  }
+}
+
+@keyframes techLineBottomToTop {
+  0% {
+    transform: translateY(calc(100vh + 120%));
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+}
+
+.animate-tech-h1 {
+  animation: techLineLeftToRight 18s linear infinite;
+  will-change: transform, opacity;
+}
+
+.animate-tech-h2 {
+  animation: techLineRightToLeft 24s linear infinite 3s;
+  will-change: transform, opacity;
+}
+
+.animate-tech-h3 {
+  animation: techLineLeftToRight 21s linear infinite 8s;
+  will-change: transform, opacity;
+}
+
+.animate-tech-v1 {
+  animation: techLineTopToBottom 16s linear infinite 1s;
+  will-change: transform, opacity;
+}
+
+.animate-tech-v2 {
+  animation: techLineBottomToTop 20s linear infinite 6s;
+  will-change: transform, opacity;
+}
+
+.animate-tech-v3 {
+  animation: techLineTopToBottom 26s linear infinite 10s;
+  will-change: transform, opacity;
+}
