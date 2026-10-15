@@ -9,7 +9,7 @@ import ChipContainer from "@/components/ui/chip-container";
 import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
-import { cn, formatDateFromObj } from "@/lib/utils";
+import { cn, formatDateFromObj, getProjectThumbnail } from "@/lib/utils";
 import profileImg from "@/public/profile-img.png";
 
 interface ProjectPageProps {
@@ -27,6 +27,8 @@ export default async function Project({ params }: ProjectPageProps) {
     redirect("/projects");
   }
 
+  const thumbnailSrc = getProjectThumbnail(project);
+
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <Link
@@ -40,12 +42,14 @@ export default async function Project({ params }: ProjectPageProps) {
         All Projects
       </Link>
       <div>
-        <time
-          dateTime={Date.now().toString()}
-          className="block text-sm text-muted-foreground"
-        >
-          {formatDateFromObj(project.startDate)}
-        </time>
+        {formatDateFromObj(project.startDate) && (
+          <time
+            dateTime={Date.now().toString()}
+            className="block text-sm text-muted-foreground"
+          >
+            {formatDateFromObj(project.startDate)}
+          </time>
+        )}
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {project.companyName}
           <div className="flex items-center">
@@ -73,14 +77,14 @@ export default async function Project({ params }: ProjectPageProps) {
           >
             <Image
               src={profileImg}
-              alt={"naman"}
+              alt={siteConfig.authorName}
               width={42}
               height={42}
               className="rounded-full bg-background"
             />
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Hoàng Tuấn Anh"}</p>
+              <p className="font-medium">{siteConfig.authorName}</p>
               <p className="text-[12px] text-muted-foreground">
                 @{siteConfig.username}
               </p>
@@ -89,14 +93,16 @@ export default async function Project({ params }: ProjectPageProps) {
         </div>
       </div>
 
-      <Image
-        src={project.companyLogoImg}
-        alt={project.companyName}
-        width={720}
-        height={405}
-        className="my-8 rounded-md border bg-muted transition-colors"
-        priority
-      />
+      <div className="relative w-full aspect-video my-8 rounded-md border bg-muted overflow-hidden">
+        <Image
+          src={thumbnailSrc}
+          alt={project.companyName}
+          fill
+          className="object-cover transition-colors"
+          priority
+          unoptimized={thumbnailSrc.startsWith("/api/og")}
+        />
+      </div>
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">

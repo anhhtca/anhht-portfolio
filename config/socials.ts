@@ -10,9 +10,9 @@ interface SocialInterface {
 export const SocialLinks: SocialInterface[] = [
   {
     name: "Github",
-    username: "@anhhtca",
+    username: "@anhhtz",
     icon: Icons.gitHub,
-    link: "https://github.com/anhhtca",
+    link: "https://github.com/anhhtz",
   },
   // {
   //   name: "LinkedIn",

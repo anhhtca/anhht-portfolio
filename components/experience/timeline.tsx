@@ -11,7 +11,8 @@ import { ExperienceInterface } from "@/config/experience";
 
 // Helper function to extract year from date
 const getYearFromDate = (date: Date): string => {
-  return new Date(date).getFullYear().toString();
+  const d = new Date(date);
+  return isNaN(d.getTime()) ? "" : d.getFullYear().toString();
 };
 
 // Helper function to get duration text
@@ -22,7 +23,7 @@ const getDurationText = (
   const startYear = getYearFromDate(startDate);
   const endYear =
     typeof endDate === "string" ? "Present" : getYearFromDate(endDate);
-  return `${startYear} - ${endYear}`;
+  return startYear ? `${startYear} - ${endYear}` : endYear;
 };
 
 interface TimelineProps {

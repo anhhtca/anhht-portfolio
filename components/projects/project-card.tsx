@@ -5,21 +5,25 @@ import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
 import { ProjectInterface } from "@/config/projects";
+import { getProjectThumbnail } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: ProjectInterface;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const thumbnailSrc = getProjectThumbnail(project);
+
   return (
     <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col">
-      <div className="relative w-full h-[200px] flex-shrink-0">
+      <div className="relative w-full h-[200px] flex-shrink-0 bg-muted rounded-lg overflow-hidden">
         <Image
           className="rounded-lg border border-border object-cover"
-          src={project.companyLogoImg}
-          alt="img"
+          src={thumbnailSrc}
+          alt={project.companyName}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          unoptimized={thumbnailSrc.startsWith("/api/og")}
         />
       </div>
       <div className="pt-5 space-y-3 flex flex-col flex-grow">

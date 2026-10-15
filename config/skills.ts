@@ -5,156 +5,368 @@ export interface skillsInterface {
   description: string;
   rating: number;
   icon: any;
+  category?: string;
 }
 
+export interface skillCategoryInterface {
+  category: string;
+  items: string[];
+}
+
+export const skillCategories: skillCategoryInterface[] = [
+  {
+    category: "Frontend Development",
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    category: "Backend Development",
+    items: [
+      "Node.js",
+      ".NET",
+      "REST APIs",
+      "Authentication",
+      "Authorization",
+      "API Design",
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
+      "PostgreSQL",
+      "Oracle Database",
+      "Prisma ORM",
+      "SQL",
+      "Database Administration",
+      "Data Modeling",
+    ],
+  },
+  {
+    category: "AI Engineering",
+    items: [
+      "LLMs",
+      "Prompt Engineering",
+      "Retrieval-Augmented Generation",
+      "Embeddings",
+      "Local LLMs",
+      "AI Agents",
+    ],
+  },
+  {
+    category: "Infrastructure & DevOps",
+    items: [
+      "Docker",
+      "Linux",
+      "Networking",
+      "Reverse Proxies",
+      "High Availability",
+      "System Administration",
+    ],
+  },
+  {
+    category: "Engineering Practices",
+    items: [
+      "System Architecture",
+      "Role-Based Access Control",
+      "Audit Logging",
+      "Workflow Automation",
+      "AI-Assisted Development",
+    ],
+  },
+];
+
 export const skillsUnsorted: skillsInterface[] = [
+  // Core Highlights (featured candidates across core themes)
   {
     name: "Next.js",
+    category: "Frontend Development",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+      "Build production-grade web applications with modern App Router, layouts, and server actions.",
     rating: 5,
     icon: Icons.nextjs,
   },
   {
-    name: "React",
+    name: "TypeScript",
+    category: "Frontend Development",
     description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
-    rating: 5,
-    icon: Icons.react,
-  },
-  {
-    name: "GraphQL",
-    description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
-    rating: 4,
-    icon: Icons.graphql,
-  },
-  {
-    name: "Nest.js",
-    description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
-    rating: 4,
-    icon: Icons.nestjs,
-  },
-  {
-    name: "express.js",
-    description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
-    rating: 5,
-    icon: Icons.express,
-  },
-  {
-    name: "Node.js",
-    description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
-    rating: 5,
-    icon: Icons.nodejs,
-  },
-  {
-    name: "MongoDB",
-    description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
-    rating: 5,
-    icon: Icons.mongodb,
-  },
-  {
-    name: "Typescript",
-    description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
+      "Scale software development with robust static type safety and enhanced maintainability.",
     rating: 5,
     icon: Icons.typescript,
   },
   {
-    name: "Javascript",
+    name: "Node.js",
+    category: "Backend Development",
     description:
-      "Create interactive and dynamic web experiences with the versatile scripting language.",
+      "Develop efficient server-side applications, microservices, and backend tooling.",
+    rating: 5,
+    icon: Icons.nodejs,
+  },
+  {
+    name: "PostgreSQL",
+    category: "Databases",
+    description:
+      "Architect, operate, and optimize robust relational database schemas and queries.",
+    rating: 5,
+    icon: Icons.postgresql,
+  },
+  {
+    name: "LLMs",
+    category: "AI Engineering",
+    description:
+      "Integrate large language model capabilities, structured generation, and agentic workflows.",
+    rating: 5,
+    icon: Icons.brain,
+  },
+  {
+    name: "Docker",
+    category: "Infrastructure & DevOps",
+    description:
+      "Containerize services and environments for reproducible development and deployment.",
+    rating: 5,
+    icon: Icons.docker,
+  },
+
+  // Frontend Development
+  {
+    name: "React",
+    category: "Frontend Development",
+    description:
+      "Build dynamic and responsive component-based user interfaces with modern React patterns.",
+    rating: 5,
+    icon: Icons.react,
+  },
+  {
+    name: "JavaScript",
+    category: "Frontend Development",
+    description:
+      "Create interactive web applications across browser clients and server environments.",
     rating: 5,
     icon: Icons.javascript,
   },
   {
-    name: "HTML 5",
+    name: "HTML",
+    category: "Frontend Development",
     description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
-    rating: 4,
+      "Structure semantic, accessible, and standards-compliant web document foundations.",
+    rating: 5,
     icon: Icons.html5,
   },
   {
-    name: "CSS 3",
+    name: "CSS",
+    category: "Frontend Development",
     description:
-      "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
-    rating: 4,
+      "Design flexible, responsive layouts and animations with utility and modern stylesheets.",
+    rating: 5,
     icon: Icons.css3,
   },
+
+  // Backend Development
   {
-    name: "React Native",
+    name: ".NET",
+    category: "Backend Development",
     description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    rating: 4,
-    icon: Icons.react,
+      "Build structured enterprise backend services, data access layers, and APIs.",
+    rating: 5,
+    icon: Icons.dotnet,
   },
   {
-    name: "Angular",
+    name: "REST APIs",
+    category: "Backend Development",
     description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
-    rating: 3,
-    icon: Icons.angular,
+      "Design and consume secure, predictable, and standardized HTTP RESTful services.",
+    rating: 5,
+    icon: Icons.externalLink,
   },
   {
-    name: "Redux",
+    name: "Authentication",
+    category: "Backend Development",
     description:
-      "Manage app state effectively using a predictable and centralized state container.",
-    rating: 4,
-    icon: Icons.redux,
+      "Implement secure identity management, token workflows, and session mechanisms.",
+    rating: 5,
+    icon: Icons.userFill,
   },
   {
-    name: "Socket.io",
+    name: "Authorization",
+    category: "Backend Development",
     description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
-    rating: 3,
-    icon: Icons.socketio,
+      "Enforce granular policy-based permissions and secure resource isolation.",
+    rating: 5,
+    icon: Icons.shield,
   },
   {
-    name: "Material UI",
+    name: "API Design",
+    category: "Backend Development",
     description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
-    rating: 4,
-    icon: Icons.mui,
+      "Architect clean, reusable contracts and consistent service communication interfaces.",
+    rating: 5,
+    icon: Icons.settings,
   },
 
+  // Databases
   {
-    name: "Tailwind CSS",
+    name: "Oracle Database",
+    category: "Databases",
     description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
+      "Administer enterprise database systems, schema structures, and operational procedures.",
     rating: 5,
-    icon: Icons.tailwindcss,
+    icon: Icons.database,
   },
   {
-    name: "AWS",
+    name: "Prisma ORM",
+    category: "Databases",
     description:
-      "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
-    rating: 3,
-    icon: Icons.amazonaws,
+      "Manage database schemas, migrations, and type-safe relational database access.",
+    rating: 5,
+    icon: Icons.prisma,
   },
   {
-    name: "Bootstrap",
+    name: "SQL",
+    category: "Databases",
     description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
-    rating: 2,
-    icon: Icons.bootstrap,
+      "Write optimized queries, views, transactional logic, and perform index tuning.",
+    rating: 5,
+    icon: Icons.database,
   },
   {
-    name: "MySQL",
+    name: "Database Administration",
+    category: "Databases",
     description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 2,
-    icon: Icons.mysql,
+      "Maintain high availability, backup strategies, monitoring, and database reliability.",
+    rating: 5,
+    icon: Icons.database,
   },
   {
-    name: "Netlify",
+    name: "Data Modeling",
+    category: "Databases",
     description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 4,
-    icon: Icons.netlify,
+      "Design normalized schemas, relationship structures, and domain data models.",
+    rating: 5,
+    icon: Icons.database,
+  },
+
+  // AI Engineering
+  {
+    name: "Prompt Engineering",
+    category: "AI Engineering",
+    description:
+      "Craft structured prompts, system instructions, and schema validation pipelines.",
+    rating: 5,
+    icon: Icons.sparkles,
+  },
+  {
+    name: "Retrieval-Augmented Generation",
+    category: "AI Engineering",
+    description:
+      "Ground language models on domain documents for source-grounded information retrieval.",
+    rating: 5,
+    icon: Icons.bot,
+  },
+  {
+    name: "Embeddings",
+    category: "AI Engineering",
+    description:
+      "Compute vector representations for semantic search and contextual knowledge similarity.",
+    rating: 5,
+    icon: Icons.sparkles,
+  },
+  {
+    name: "Local LLMs",
+    category: "AI Engineering",
+    description:
+      "Deploy and run local open-weight models for privacy-conscious offline inference.",
+    rating: 5,
+    icon: Icons.cpu,
+  },
+  {
+    name: "AI Agents",
+    category: "AI Engineering",
+    description:
+      "Orchestrate multi-step task loops with function calling, tool use, and automated reasoning.",
+    rating: 5,
+    icon: Icons.bot,
+  },
+
+  // Infrastructure & DevOps
+  {
+    name: "Linux",
+    category: "Infrastructure & DevOps",
+    description:
+      "Manage Linux server environments, shell automation, security configs, and operations.",
+    rating: 5,
+    icon: Icons.linux,
+  },
+  {
+    name: "Networking",
+    category: "Infrastructure & DevOps",
+    description:
+      "Configure DNS, routing, firewall rules, and secure communication channels.",
+    rating: 5,
+    icon: Icons.network,
+  },
+  {
+    name: "Reverse Proxies",
+    category: "Infrastructure & DevOps",
+    description:
+      "Manage traffic routing, TLS termination, load distribution, and proxy gateways.",
+    rating: 5,
+    icon: Icons.server,
+  },
+  {
+    name: "High Availability",
+    category: "Infrastructure & DevOps",
+    description:
+      "Design clustered failover architectures, quorum consensus, and redundant services.",
+    rating: 5,
+    icon: Icons.server,
+  },
+  {
+    name: "System Administration",
+    category: "Infrastructure & DevOps",
+    description:
+      "Maintain server uptime, system patching, service monitoring, and operational readiness.",
+    rating: 5,
+    icon: Icons.settings,
+  },
+
+  // Engineering Practices
+  {
+    name: "System Architecture",
+    category: "Engineering Practices",
+    description:
+      "Design decoupled, reliable, and scalable multi-tier software system architectures.",
+    rating: 5,
+    icon: Icons.laptop,
+  },
+  {
+    name: "Role-Based Access Control",
+    category: "Engineering Practices",
+    description:
+      "Implement application-level RBAC with fine-grained resource and action permissions.",
+    rating: 5,
+    icon: Icons.shield,
+  },
+  {
+    name: "Audit Logging",
+    category: "Engineering Practices",
+    description:
+      "Establish traceable event logging, administrative activity trails, and audit systems.",
+    rating: 5,
+    icon: Icons.post,
+  },
+  {
+    name: "Workflow Automation",
+    category: "Engineering Practices",
+    description:
+      "Automate repetitive operational tasks, ETL steps, and pipeline triggers.",
+    rating: 5,
+    icon: Icons.workflow,
+  },
+  {
+    name: "AI-Assisted Development",
+    category: "Engineering Practices",
+    description:
+      "Accelerate implementation, testing, and system prototyping with AI development workflows.",
+    rating: 5,
+    icon: Icons.sparkles,
   },
 ];
 

@@ -24,8 +24,7 @@ import profileImg from "@/public/profile-img.png";
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
-  description:
-    "Hoàng Tuấn Anh - Applied AI Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
+  description: siteConfig.description,
   alternates: {
     canonical: siteConfig.url,
   },
@@ -40,8 +39,8 @@ export default function IndexPage() {
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Applied AI Engineer",
-    sameAs: [siteConfig.links.github, siteConfig.links.twitter],
+    jobTitle: siteConfig.title,
+    sameAs: [siteConfig.links.github, siteConfig.links.twitter].filter(Boolean),
   };
 
   // Structured data for website as a software application (template)
@@ -84,7 +83,7 @@ export default function IndexPage() {
             width={100}
             sizes="100vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-gray-500"
-            alt="Hoàng Tuấn Anh - Applied AI Engineer Portfolio"
+            alt={`${siteConfig.authorName} - ${siteConfig.title}`}
             priority
           />
           <AnimatedText
@@ -92,19 +91,18 @@ export default function IndexPage() {
             delay={0.2}
             className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Hoàng Tuấn Anh
+            {siteConfig.authorName}
           </AnimatedText>
           <AnimatedText
             as="h3"
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Applied AI Engineer
+            {siteConfig.title}
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Software engineer working at the intersection of AI, data, and
-              scalable software systems.
+              {siteConfig.tagline}
             </p>
           </div>
 
@@ -221,35 +219,37 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
-      <AnimatedSection
-        direction="up"
-        className="container space-y-6 bg-muted py-10 my-14"
-        id="contributions"
-      >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <AnimatedText
-            as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
-          >
-            {pagesConfig.contributions.title}
+      {featuredContributions.length > 0 && (
+        <AnimatedSection
+          direction="up"
+          className="container space-y-6 bg-muted py-10 my-14"
+          id="contributions"
+        >
+          <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+            <AnimatedText
+              as="h2"
+              className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+            >
+              {pagesConfig.contributions.title}
+            </AnimatedText>
+            <AnimatedText
+              as="p"
+              delay={0.2}
+              className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+            >
+              {pagesConfig.contributions.description}
+            </AnimatedText>
+          </div>
+          <ContributionCard contributions={featuredContributions} />
+          <AnimatedText delay={0.4} className="flex justify-center">
+            <Link href="/contributions">
+              <Button variant={"outline"} className="rounded-xl">
+                <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              </Button>
+            </Link>
           </AnimatedText>
-          <AnimatedText
-            as="p"
-            delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-          >
-            {pagesConfig.contributions.description}
-          </AnimatedText>
-        </div>
-        <ContributionCard contributions={featuredContributions} />
-        <AnimatedText delay={0.4} className="flex justify-center">
-          <Link href="/contributions">
-            <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
-            </Button>
-          </Link>
-        </AnimatedText>
-      </AnimatedSection>
+        </AnimatedSection>
+      )}
       {/* <AnimatedSection
         direction="up"
         className="container space-y-6 py-10 my-14"
