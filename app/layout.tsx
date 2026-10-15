@@ -45,7 +45,8 @@ export const metadata = {
   creator: siteConfig.username,
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "vi_VN",
+    alternateLocale: ["en_US"],
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -56,6 +57,7 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt: siteConfig.name,
+        type: "image/png",
       },
     ],
   },
@@ -72,6 +74,7 @@ export const metadata = {
       },
     ],
     creator: `@${siteConfig.username}`,
+    site: `@${siteConfig.username}`,
   },
   icons: {
     icon: siteConfig.iconIco,

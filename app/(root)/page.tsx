@@ -21,7 +21,7 @@ export default function IndexPage() {
     "@type": "Person",
     name: siteConfig.authorName,
     url: siteConfig.url,
-    image: siteConfig.ogImage,
+    image: `${siteConfig.url}${siteConfig.avatar}`,
     jobTitle: siteConfig.title,
     sameAs: [siteConfig.links.github, siteConfig.links.twitter].filter(Boolean),
   };
