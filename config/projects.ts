@@ -43,11 +43,11 @@ export const Projects: ProjectInterface[] = [
     shortDescriptionEn:
       "A web-based learning and assessment platform designed to make knowledge practice more engaging and accessible.",
     websiteLink: "https://bankquiz.app",
-    thumbnail: "",
+    thumbnail: "https://raw.githubusercontent.com/QuizApp-Project/bankquiz.app/refs/heads/main/bankquiz.png",
     techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    startDate: new Date(NaN),
+    startDate: new Date(2024, 0, 1),
     endDate: new Date(NaN),
-    companyLogoImg: "/logo.png",
+    companyLogoImg: "https://raw.githubusercontent.com/QuizApp-Project/bankquiz.app/refs/heads/main/bankquiz.png",
     pagesInfoArr: [
       {
         title: "Learning & Practice Experience",
@@ -90,7 +90,7 @@ export const Projects: ProjectInterface[] = [
       "RBAC",
       "Docker",
     ],
-    startDate: new Date(NaN),
+    startDate: new Date(2026,1,1),
     endDate: new Date(NaN),
     companyLogoImg: "/logo.png",
     pagesInfoArr: [
@@ -129,7 +129,7 @@ export const Projects: ProjectInterface[] = [
     shortDescriptionEn:
       "Specialized banking workflow software for initiating and routing credit files requiring Head Office approval.",
     websiteLink: "https://sdtn-project.web.app/",
-    thumbnail: "",
+    thumbnail: "https://sdtn-project.web.app/assets/images/hero/sdtn-demo-browser-frame.png",
     techStack: [
       "React",
       "TypeScript",

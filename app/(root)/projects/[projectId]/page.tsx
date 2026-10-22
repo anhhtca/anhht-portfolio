@@ -1,8 +1,11 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import Script from "next/script";
 
 import { Icons } from "@/components/common/icons";
+import ProjectBackButton from "@/components/projects/project-back-button";
 import ProjectDescription from "@/components/projects/project-description";
 import { buttonVariants } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
@@ -18,7 +21,58 @@ interface ProjectPageProps {
   }>;
 }
 
-import ProjectBackButton from "@/components/projects/project-back-button";
+export async function generateStaticParams() {
+  return Projects.map((project) => ({
+    projectId: project.id,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { projectId } = await params;
+  const project = Projects.find((val) => val.id === projectId);
+  if (!project) {
+    return {
+      title: "Project Not Found",
+    };
+  }
+
+  const title = `${project.companyName} | Projects`;
+  const description =
+    project.shortDescriptionEn || project.shortDescription || "";
+  const ogImage = `${siteConfig.url}/api/og/project?id=${project.id}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${siteConfig.url}/projects/${projectId}`,
+    },
+    openGraph: {
+      title: `${project.companyName} | ${siteConfig.name}`,
+      description,
+      url: `${siteConfig.url}/projects/${projectId}`,
+      siteName: siteConfig.name,
+      type: "website",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: project.companyName,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.companyName} | ${siteConfig.name}`,
+      description,
+      images: [ogImage],
+      creator: `@${siteConfig.username}`,
+    },
+  };
+}
 
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
@@ -29,9 +83,31 @@ export default async function Project({ params }: ProjectPageProps) {
 
   const thumbnailSrc = getProjectThumbnail(project);
 
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.companyName,
+    description: project.shortDescription,
+    applicationCategory: project.category.join(", "),
+    operatingSystem: "Web",
+    author: {
+      "@type": "Person",
+      name: siteConfig.authorName,
+      url: siteConfig.url,
+    },
+    ...(project.websiteLink && { url: project.websiteLink }),
+    image: `${siteConfig.url}/api/og/project?id=${project.id}`,
+  };
+
   return (
-    <article className="container relative max-w-3xl py-6 lg:py-10">
-      <ProjectBackButton />
+    <>
+      <Script
+        id={`schema-project-${project.id}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+      />
+      <article className="container relative max-w-3xl py-6 lg:py-10">
+        <ProjectBackButton />
       <div>
         {formatDateFromObj(project.startDate) && (
           <time
@@ -91,6 +167,7 @@ export default async function Project({ params }: ProjectPageProps) {
           fill
           className="object-cover transition-colors"
           priority
+          loading="eager"
           unoptimized={thumbnailSrc.startsWith("/api/og")}
         />
       </div>
@@ -150,6 +227,7 @@ export default async function Project({ params }: ProjectPageProps) {
           All Projects
         </Link>
       </div>
-    </article>
+      </article>
+    </>
   );
 }

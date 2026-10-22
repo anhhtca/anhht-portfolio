@@ -130,7 +130,11 @@ export default function HomeView() {
                 direction="up"
                 className="h-full w-full min-w-0"
               >
-                <ProjectCard project={exp} />
+                <ProjectCard
+                  project={exp}
+                  priority={index < 3}
+                  loading={index < 3 ? "eager" : "lazy"}
+                />
               </AnimatedSection>
             ))}
           </div>

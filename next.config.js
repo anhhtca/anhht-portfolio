@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [new URL('https://raw.githubusercontent.com/QuizApp-Project/**')],
+  },
+  allowedDevOrigins: ['hookworm-settled-secretly.ngrok-free.app'],
   async headers() {
     return [
       {

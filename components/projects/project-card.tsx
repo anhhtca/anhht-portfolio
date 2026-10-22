@@ -12,9 +12,15 @@ import { getProjectThumbnail } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: ProjectInterface;
+  priority?: boolean;
+  loading?: "eager" | "lazy";
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  priority = false,
+  loading,
+}: ProjectCardProps) {
   const { locale, t } = useLocale();
   const thumbnailSrc = getProjectThumbnail(project);
 
@@ -33,6 +39,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           unoptimized={thumbnailSrc.startsWith("/api/og")}
+          priority={priority}
+          loading={priority ? "eager" : loading}
         />
       </div>
       <div className="pt-5 space-y-3 flex flex-col flex-grow">

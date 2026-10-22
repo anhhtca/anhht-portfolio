@@ -16,8 +16,13 @@ const renderContent = (tabVal: string) => {
 
   return (
     <div className="mx-auto my-4 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 static items-stretch">
-      {projectArr.map((project) => (
-        <ProjectCard project={project} key={project.id} />
+      {projectArr.map((project, index) => (
+        <ProjectCard
+          project={project}
+          key={project.id}
+          priority={index < 3}
+          loading={index < 3 ? "eager" : "lazy"}
+        />
       ))}
     </div>
   );
