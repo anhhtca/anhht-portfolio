@@ -88,7 +88,7 @@ export const metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
-  manifest: "/manifest.webmanifest",
+  manifest: "/site.webmanifest",
   alternates: {
     canonical: siteConfig.url,
   },
