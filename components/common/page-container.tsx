@@ -21,16 +21,16 @@ export default function PageContainer({
 }: PageContainerProps) {
   const { t } = useLocale();
 
-  const finalTitle = pageKey ? t.pages[pageKey].title : (title || "");
-  const finalDescription = pageKey ? t.pages[pageKey].description : (description || "");
+  const finalTitle = pageKey ? t.pages[pageKey].title : title || "";
+  const finalDescription = pageKey
+    ? t.pages[pageKey].description
+    : description || "";
 
   return (
     <ClientPageWrapper>
-      <div className="container mx-auto">
+      <div className="container pb-16 md:pb-24">
         <PageHeader title={finalTitle} description={finalDescription} />
-        <div className="mx-4 sm:mx-6 lg:mx-8 max-w-full overflow-x-hidden">
-          {children}
-        </div>
+        <div className="w-full">{children}</div>
       </div>
     </ClientPageWrapper>
   );

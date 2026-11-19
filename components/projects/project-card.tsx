@@ -1,11 +1,9 @@
 "use client";
 
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
-import ChipContainer from "@/components/ui/chip-container";
 import { ProjectInterface } from "@/config/projects";
 import { useLocale } from "@/hooks/use-locale";
 import { getProjectThumbnail } from "@/lib/utils";
@@ -29,11 +27,17 @@ export default function ProjectCard({
       ? project.shortDescriptionVi || project.shortDescription
       : project.shortDescriptionEn || project.shortDescription;
 
+  const typeLabel =
+    project.type === "Personal" ? t.common.personal : t.common.professional;
+
   return (
-    <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col">
-      <div className="relative w-full h-[200px] flex-shrink-0 bg-muted rounded-lg overflow-hidden">
+    <Link
+      href={`/projects/${project.id}`}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    >
+      <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border/70 bg-muted">
         <Image
-          className="rounded-lg border border-border object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
           src={thumbnailSrc}
           alt={project.companyName}
           fill
@@ -42,31 +46,41 @@ export default function ProjectCard({
           priority={priority}
           loading={priority ? "eager" : loading}
         />
+        <span className="absolute left-3 top-3 rounded-full border border-border/60 bg-card/90 px-2.5 py-0.5 font-mono text-[11px] font-medium text-foreground backdrop-blur-sm">
+          {typeLabel}
+        </span>
       </div>
-      <div className="pt-5 space-y-3 flex flex-col flex-grow">
-        <h5 className="text-2xl font-bold tracking-tight text-foreground">
+
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="text-lg font-bold tracking-tight text-foreground transition-colors group-hover:text-primary">
           {project.companyName}
-        </h5>
-        <p className="line-clamp-3 font-normal text-muted-foreground flex-grow">
+        </h3>
+
+        <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-muted-foreground">
           {localizedDesc}
         </p>
-        <div className="flex gap-2 flex-wrap">
-          <ChipContainer textArr={project.category} />
+
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {project.techStack.slice(0, 3).map((tech) => (
+            <span
+              key={tech}
+              className="rounded-md bg-band px-2 py-0.5 font-mono text-[11px] font-medium text-muted-foreground"
+            >
+              {tech}
+            </span>
+          ))}
+          {project.techStack.length > 3 && (
+            <span className="rounded-md bg-band px-2 py-0.5 font-mono text-[11px] font-medium text-muted-foreground">
+              +{project.techStack.length - 3}
+            </span>
+          )}
         </div>
-        <Link href={`/projects/${project.id}`} className="mt-auto">
-          <Button variant={"default"} className="mt-2 w-full sm:w-auto">
-            {t.common.readMore}
-            <Icons.chevronRight className="w-4 ml-1" />
-          </Button>
-        </Link>
+
+        <div className="mt-4 flex items-center justify-between border-t border-border/70 pt-3.5 text-xs font-semibold text-primary">
+          <span>{t.common.readMore}</span>
+          <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </div>
       </div>
-      <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border hidden md:block">
-        {project.type === "Personal" ? (
-          <Icons.userFill className="h-4 w-4" />
-        ) : (
-          <Icons.work className="h-4 w-4" />
-        )}
-      </div>
-    </div>
+    </Link>
   );
 }

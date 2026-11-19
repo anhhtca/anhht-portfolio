@@ -1,9 +1,7 @@
 import "./globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Inter as FontSans } from "next/font/google";
-import localFont from "next/font/local";
-import Script from "next/script";
+import { Be_Vietnam_Pro, JetBrains_Mono } from "next/font/google";
 
 import { Analytics } from "@/components/common/analytics";
 import { ThemeProvider } from "@/components/common/theme-provider";
@@ -13,15 +11,18 @@ import { cn } from "@/lib/utils";
 import { LocaleProvider } from "@/providers/locale-provider";
 import { ModalProvider } from "@/providers/modal-provider";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
+const fontSans = Be_Vietnam_Pro({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
+  display: "swap",
 });
 
-// Font files can be colocated inside of `pages`
-const fontHeading = localFont({
-  src: "../assets/fonts/CalSans-SemiBold.woff2",
-  variable: "--font-heading",
+const fontMono = JetBrains_Mono({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 interface RootLayoutProps {
@@ -109,33 +110,23 @@ export const metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID;
-  if (!GA_ID) {
-    throw new Error("Missing Google Analytics ID");
-  }
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="vi" suppressHydrationWarning>
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans text-foreground antialiased",
           fontSans.variable,
-          fontHeading.variable
+          fontMono.variable
         )}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          themes={[
-            "light",
-            "dark",
-            "retro",
-            "cyberpunk",
-            "paper",
-            "aurora",
-            "synthwave",
-          ]}
+          themes={["light", "dark"]}
+          disableTransitionOnChange
         >
           <LocaleProvider>
             {children}
@@ -144,9 +135,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <ModalProvider />
           </LocaleProvider>
         </ThemeProvider>
-        
       </body>
-      <GoogleAnalytics gaId={GA_ID} />
+      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
   );
 }

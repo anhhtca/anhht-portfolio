@@ -15,7 +15,7 @@ const renderContent = (tabVal: string) => {
   }
 
   return (
-    <div className="mx-auto my-4 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 static items-stretch">
+    <div className="mx-auto my-6 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {projectArr.map((project, index) => (
         <ProjectCard
           project={project}

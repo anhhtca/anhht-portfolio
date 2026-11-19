@@ -11,18 +11,18 @@ interface MarketingLayoutProps {
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
-        <div className="container flex h-20 items-center justify-between py-6">
+      <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-card/85 backdrop-blur-md">
+        <div className="container flex h-16 items-center justify-between">
           <MainNav items={routesConfig.mainNav}>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5">
               <LanguageToggle className="w-full justify-center" />
               <ModeToggle />
             </div>
           </MainNav>
-          <nav className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <LanguageToggle />
             <ModeToggle />
-          </nav>
+          </div>
         </div>
       </header>
       <main className="flex-1">{children}</main>

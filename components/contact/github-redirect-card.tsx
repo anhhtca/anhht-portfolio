@@ -1,58 +1,65 @@
 "use client";
 
+import { ArrowUpRight, Github, Mail } from "lucide-react";
+import Link from "next/link";
+
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { siteConfig } from "@/config/site";
 import { useLocale } from "@/hooks/use-locale";
-import { buttonVariants } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Github, Heart } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
 
 export default function GithubRedirectCard() {
-  const [isHovered, setIsHovered] = useState(false);
   const { t } = useLocale();
 
   return (
-    <Card
-      className="w-full h-fit max-w-sm overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-102 mt-5"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <CardContent className="p-8 flex flex-col items-center text-center">
-        <div className="mb-6">
-          <Heart
-            className={`w-12 h-12 transition-colors duration-300 ease-out ${
-              isHovered ? "text-red-500" : "text-muted-foreground"
-            }`}
-          />
+    <Card className="h-fit w-full max-w-md rounded-2xl border-border bg-card shadow-card">
+      <CardContent className="p-7 space-y-6">
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-primary">
+          <Github className="h-6 w-6" />
         </div>
-        <h2 className="font-heading text-xl tracking-tight lg:text-3xl duration-300">
-          {t.pages.contact.githubCardTitle}
-        </h2>
-        <p className="mt-2 mb-10 font-heading text-lg text-muted-foreground">
-          {t.pages.contact.githubCardDesc}
-        </p>
-        <Github className="w-10 h-10 text-muted-foreground mb-5" />
+
+        <div className="space-y-2">
+          <h2 className="text-xl font-bold tracking-tight text-foreground">
+            {t.pages.contact.githubCardTitle}
+          </h2>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            {t.pages.contact.githubCardDesc}
+          </p>
+        </div>
+
+        <div className="space-y-2.5 pt-2">
+          <Link
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "w-full justify-between rounded-lg font-semibold"
+            )}
+          >
+            <span className="flex items-center gap-2">
+              <Github className="h-4 w-4" />
+              <span>GitHub (@{siteConfig.username})</span>
+            </span>
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+
+          <Link
+            href="mailto:anhht.ca@gmail.com"
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "w-full justify-between rounded-lg border-border font-semibold"
+            )}
+          >
+            <span className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              <span>anhht.ca@gmail.com</span>
+            </span>
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
       </CardContent>
-      <CardFooter className="px-8 pb-8 pt-0">
-        <Link
-          href={siteConfig.links.github}
-          target="_blank"
-          className={cn(
-            buttonVariants({ variant: "outline" }),
-            "w-full bg-transparent border-2 transition-all duration-300 py-6"
-          )}
-        >
-          <span className="mr-2">{t.pages.contact.sourceCode}</span>
-          <ExternalLink className="w-5 h-5" />
-        </Link>
-      </CardFooter>
-      <div
-        className={`h-1 bg-gradient-to-r from-red-500 to-red-500 transition-all duration-300 ease-out ${
-          isHovered ? "opacity-100" : "opacity-0"
-        }`}
-      ></div>
     </Card>
   );
 }
